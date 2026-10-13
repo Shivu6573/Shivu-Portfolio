@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shiva Kumara S N | Test Engineer / QA Engineer</title>
+    <title>Shiva Kumara S N | Test Engineer!</title>
     <meta
       name="description"
-      content="Test Engineer portfolio: manual, API and automation testing for SaaS platforms."
+      content="MCA graduate focused on Software Testing and Quality Assurance, with practical experience in manual testing, test case design and execution, defect reporting, API testing, and SQL."
     />
     <style>
       :root{--a1:#38bdf8;--a2:#6366f1;--a3:#a78bfa;--grad:linear-gradient(120deg,var(--a1),var(--a2),var(--a3));--bg:#060d1a;--bg2:#0a1528;--card:rgba(255,255,255,.05);--bd:rgba(148,190,255,.16);--ink:#eaf1fb;--dim:#9db0c9;--ok:#34d399}
@@ -32,7 +32,7 @@
       .dot{width:15px;height:15px;border-radius:50%;border:2px solid rgba(255,255,255,.5);cursor:pointer}.dot.on{box-shadow:0 0 0 2px var(--a1)}
       .ib,.btn{cursor:pointer;border:1px solid var(--bd);background:var(--card);color:inherit;border-radius:10px;font:inherit;font-size:13px;font-weight:700}
       .ib{width:34px;height:34px}.btn{padding:10px 18px;display:inline-flex;gap:8px;align-items:center;transition:.25s}
-      .btn.pri{background:var(--grad);color:#fff;border:0;box-shadow:0 10px 28px rgba(99,102,241,.35)}.btn:hover{transform:translateY(-2px)}
+      .btn.pri{background:var(--grad);color:#fff;border:0;box-shadow:0 10px 28px rgba(99,102,241,.35)}.btn:hover{transform:translateY(-2px)}#cf .btn.pri{width:100%;justify-content:center;padding:16px 20px;border-radius:12px;font-size:18px;font-weight:800;letter-spacing:.01em}
       .rs{position:relative}.rd{display:none;position:absolute;right:0;top:44px;min-width:180px;background:var(--bg2);border:1px solid var(--bd);border-radius:12px;padding:6px;box-shadow:0 18px 40px rgba(0,0,0,.35)}.rd.open{display:block}.rd a{display:block;padding:9px 12px;border-radius:8px;font-size:13px;color:var(--ink)}.rd a:hover{background:var(--card)}
       .ham{display:none}.mm{display:none;flex-direction:column;margin-top:8px;padding:8px;border-radius:14px;background:var(--bg2);border:1px solid var(--bd)}.mm.open{display:flex}.mm a{padding:11px 12px;border-radius:8px;font-size:14px}
       .mobile-themes{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border-top:1px solid var(--bd);color:var(--dim);font-size:13px;font-weight:700}.mm .dots{display:flex;gap:10px}.mobile-themes .dot{width:20px;height:20px}
@@ -41,19 +41,30 @@
       h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.03em;line-height:1.15;margin-bottom:10px}.sub{color:var(--dim);max-width:640px;margin-bottom:34px}
       .glass{background:var(--card);border:1px solid var(--bd);border-radius:20px;backdrop-filter:blur(10px)}
       /* hero */
-      .hero{min-height:calc(100vh - 70px);display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:50px 0}
+      .hero{position:relative;min-height:calc(100vh - 70px);display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:50px 0;overflow:hidden}
+      .hero > *{position:relative;z-index:1}
       .tag{display:inline-flex;gap:8px;align-items:center;font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:30px;border:1px solid var(--bd);background:var(--card);margin-bottom:18px}
       .tag i{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 var(--ok);animation:pulse 1.8s infinite}@keyframes pulse{70%{box-shadow:0 0 0 9px transparent}}
-      h1{font-size:clamp(42px,6.4vw,76px);line-height:.98;letter-spacing:-.05em;font-weight:900}h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;background-size:200% auto;animation:shine 6s linear infinite}@keyframes shine{to{background-position:200% center}}
+      h1{font-size:clamp(28px,4vw,46px);line-height:1.05;letter-spacing:-.04em;font-weight:900;margin-bottom:16px}h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;background-size:200% auto;animation:shine 6s linear infinite}@keyframes shine{to{background-position:200% center}}
       .hero-role{margin-top:8px;margin-bottom:12px;color:var(--a1);font-size:clamp(16px,2vw,22px);font-weight:800;letter-spacing:-.02em}
       .hero-role span{color:var(--ink);font-weight:700}
-      .hero-skills{display:inline-block;max-width:100%;margin-top:0!important;font-weight:700;background:linear-gradient(90deg,#a78bfa,#2dd4bf,#34d399,#60a5fa,#f472b6,#fbbf24,#f87171,#a78bfa);background-size:300% 100%;background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
-      [data-theme="light"] .hero-skills{background-image:linear-gradient(90deg,#6d28d9,#0f766e,#047857,#1d4ed8,#be185d,#a16207,#b91c1c,#6d28d9)}
-      .hero-skills:focus-visible{outline:2px solid var(--a1);outline-offset:4px;border-radius:3px}
+      .hero-badges{display:flex;flex-wrap:wrap;gap:9px;max-width:620px;margin:0 0 14px}
+      .hero-skill-panel{width:100%;max-width:620px;min-width:0;margin:0 0 14px;padding:10px;border:1px solid rgba(219,231,255,.62);border-radius:17px;background:linear-gradient(125deg,rgba(147,197,253,.78),rgba(196,181,253,.76) 42%,rgba(249,168,212,.72) 72%,rgba(110,231,211,.74));box-shadow:0 10px 26px rgba(8,18,36,.3),inset 0 1px 0 rgba(255,255,255,.72);backdrop-filter:blur(14px)}
+      [data-theme="light"] .hero-skill-panel{border-color:rgba(255,255,255,.95);background:linear-gradient(125deg,rgba(191,219,254,.82),rgba(221,214,254,.78) 42%,rgba(251,207,232,.76) 72%,rgba(153,246,228,.78));box-shadow:0 12px 30px rgba(69,91,130,.14),inset 0 1px 0 rgba(255,255,255,.96)}
+      .hero > div:first-child{min-width:0}
+      .hero-tagline{width:100%;max-width:620px;padding:4px 10px;color:#17243d;font-size:clamp(12px,.85vw,12.5px);font-weight:750;line-height:1.6;text-align:center;white-space:nowrap;min-height:1.6em}
+      .hero-tagline .cursor{display:inline-block;width:0.65ch;color:#0b1f3a;text-shadow:0 0 8px rgba(59,130,246,.55);animation:blink 0.8s steps(1) infinite;vertical-align:baseline}
+      @keyframes blink{50%{opacity:0}}
+      @media(max-width:640px){.hero-skill-panel{padding:9px;border-radius:15px}.hero-tagline{width:200%;transform:scaleX(.5);transform-origin:left center}}
+      @media(max-width:360px){.hero-tagline{width:238%;transform:scaleX(.42)}}
+      .hero-skill-panel + .lead{margin-top:0}
       .lead{color:var(--dim);max-width:540px;margin:14px 0 22px}.cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:22px}
-      .pills{display:flex;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--dim)}.pills span{padding:6px 12px;border-radius:20px;border:1px solid var(--bd);background:var(--card)}
-      .profile-frame{width:100%;max-width:350px;margin-inline:auto}
-      .profile-frame img{width:100%;height:auto;filter:drop-shadow(0 28px 35px rgba(0,0,0,.35))}
+      .pills{display:flex;flex-wrap:wrap;gap:10px;font-size:14px;color:var(--dim)}.pills span{padding:6px 12px;border-radius:20px;border:1px solid var(--bd);background:var(--card)}
+      .pills>a:not(.btn),.pills>.contact-chip{display:inline-flex;align-items:center;gap:9px;padding:10px 14px;border:1px solid var(--bd);border-radius:14px;background:linear-gradient(135deg,var(--card),rgba(56,189,248,.07));box-shadow:0 8px 22px rgba(0,0,0,.12);font-size:clamp(13px,1.15vw,15px);font-weight:700;color:var(--ink);transition:transform .22s,border-color .22s,box-shadow .22s}
+      .pills>a:not(.btn):hover{transform:translateY(-3px);border-color:var(--a1);box-shadow:0 12px 28px rgba(56,189,248,.16)}
+      .pills>a:not(.btn):focus-visible{outline:2px solid var(--a1);outline-offset:3px}
+      .profile-frame{position:relative;z-index:2;width:min(100%,320px);max-width:320px;aspect-ratio:1;margin-inline:auto;padding:0;border-radius:50%;border:none;background:transparent;box-shadow:none;overflow:hidden}
+      .profile-frame img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:50%;filter:none;background:var(--bg2)}
       .quality-strip{border-block:1px solid var(--bd);padding:14px 10px;text-align:center;color:var(--ink);font-size:14px;font-weight:700;line-height:1.6}
       /* stats / about */
       .two{display:grid;grid-template-columns:1.2fr 1fr;gap:22px}.pad{padding:28px}.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -61,23 +72,52 @@
       .quote{margin-top:18px;padding:16px 18px;border-left:3px solid var(--a1);background:var(--card);border-radius:0 14px 14px 0;font-weight:600}
       .spk{margin-top:22px;padding:18px 22px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:13.5px;color:var(--dim)}.spk b{color:var(--ink)}.spk span{padding:5px 12px;border-radius:20px;background:var(--grad);color:#fff;font-weight:700;font-size:12px}
       /* skills */
-      .skill-groups{display:flex;flex-direction:column;gap:20px}
-      .skill-group h3{margin:0 0 10px;font-size:14px;font-weight:700;letter-spacing:1px;color:var(--dim);text-transform:uppercase}
-      .skill-icon-grid{display:flex;flex-wrap:wrap;gap:10px}
-      .skill-icon{min-height:52px;padding:8px 14px 8px 8px;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:10px;text-align:left;border-radius:12px;box-shadow:0 3px 10px rgba(0,0,0,.08);transition:transform 180ms ease,border-color 180ms ease}
-      .skill-icon img{width:50px;height:50px;flex:0 0 42px;object-fit:contain;padding:4px;border-radius:10px;border:1px solid var(--bd);background:rgba(255,255,255,.04);box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
-      .skill-icon span{font-size:13px;line-height:1.25;font-weight:600;color:var(--ink);white-space:nowrap}
-      #skills .skill-icon:hover{border-color:var(--a1);transform:translateY(-2px)}
+      #skills{position:relative;isolation:isolate}
+      #skills::before{content:"";position:absolute;z-index:-1;inset:16px 0 0;pointer-events:none;opacity:.18;background-image:radial-gradient(circle at 8% 22%,var(--a1) 0 1.5px,transparent 2.5px),radial-gradient(circle at 91% 17%,var(--a1) 0 1.5px,transparent 2.5px),radial-gradient(circle at 76% 71%,#20D5C2 0 1.5px,transparent 2.5px),linear-gradient(28deg,transparent 17%,color-mix(in srgb,var(--a1) 16%,transparent) 17.1%,transparent 17.3%,transparent 83%,color-mix(in srgb,var(--a1) 13%,transparent) 83.1%,transparent 83.3%),linear-gradient(151deg,transparent 34%,color-mix(in srgb,#a78bfa 12%,transparent) 34.1%,transparent 34.3%);background-size:100% 100%}
+      #skills .sub{margin-bottom:26px}
+      #skills .skills-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
+      #skills .skill-card{--skill-accent:#3B9EFF;position:relative;display:flex;min-width:0;flex-direction:column;padding:18px 20px 20px;overflow:hidden;border:1px solid color-mix(in srgb,var(--skill-accent) 24%,var(--bd));border-radius:18px;background:linear-gradient(145deg,color-mix(in srgb,var(--card) 78%,var(--bg2) 22%),color-mix(in srgb,var(--bg2) 82%,transparent));box-shadow:0 12px 28px rgba(5,15,32,.12),inset 0 1px 0 rgba(255,255,255,.08);backdrop-filter:blur(12px);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+      #skills .skill-card:nth-child(2){--skill-accent:#20D5C2}
+      #skills .skill-card:nth-child(3){--skill-accent:#3B9EFF}
+      #skills .skill-card:nth-child(4){--skill-accent:#FFC83D}
+      #skills .skill-card:nth-child(5){--skill-accent:#3B9EFF}
+      #skills .skill-card:nth-child(6){--skill-accent:#20D5C2}
+      #skills .skill-card::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background-repeat:no-repeat;background-position:right 8px bottom 8px;background-size:62% auto;opacity:.3;filter:saturate(1.15)}
+      #skills .skill-card:nth-child(1)::before{background-image:url("assets/manual-testing.png")}
+      #skills .skill-card:nth-child(2)::before{background-image:url("assets/test-design-execution.png")}
+      #skills .skill-card:nth-child(3)::before{background-image:url("assets/defect-management.png")}
+      #skills .skill-card:nth-child(4)::before{background-image:url("assets/database-sql.png")}
+      #skills .skill-card:nth-child(5)::before{background-image:url("assets/test-management-tools.png")}
+      #skills .skill-card::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 92% 0,color-mix(in srgb,var(--skill-accent) 8%,transparent),transparent 48%)}
+      #skills .skill-card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--skill-accent) 55%,var(--bd));box-shadow:0 17px 32px rgba(5,15,32,.17),inset 0 1px 0 rgba(255,255,255,.1)}
+      #skills .skill-card:focus-within{outline:2px solid color-mix(in srgb,var(--skill-accent) 68%,transparent);outline-offset:3px}
+      #skills .skill-card > *{position:relative;z-index:1}
+      #skills .skill-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:94px;margin-bottom:6px}
+      #skills .skill-illustration{display:block;flex:0 1 auto;width:min(100%,220px);height:auto;aspect-ratio:2.3;overflow:visible}
+      #skills .skill-number{flex:0 0 auto;display:grid;place-items:center;width:40px;height:40px;border:1px solid color-mix(in srgb,var(--skill-accent) 38%,var(--bd));border-radius:12px;background:color-mix(in srgb,var(--skill-accent) 13%,var(--bg2));color:var(--ink);font-size:15px;font-weight:800;letter-spacing:-.03em}
+      #skills .skill-card h3{margin:0 0 4px;color:var(--ink);font-size:18px;line-height:1.3;letter-spacing:-.02em}
+      #skills .skill-card p{max-width:35ch;margin:0;color:var(--dim);font-size:13px;line-height:1.5}
+      #skills .skill-list{display:flex;flex-wrap:wrap;align-content:flex-start;gap:8px;margin:14px 0 0;padding:13px 0 0;border-top:1px solid color-mix(in srgb,var(--bd) 82%,var(--skill-accent) 18%);list-style:none}
+      #skills .skill-list li{display:inline-flex;align-items:flex-start;gap:7px;min-width:0;max-width:100%;padding:6px 9px;border:1px solid color-mix(in srgb,var(--skill-accent) 18%,var(--bd));border-radius:999px;background:color-mix(in srgb,var(--skill-accent) 5%,var(--card));color:var(--ink);font-size:12px;font-weight:600;line-height:1.4;overflow-wrap:anywhere}
+      #skills .skill-list li::before{content:"";flex:0 0 6px;width:6px;height:6px;margin-top:.43em;border-radius:50%;background:var(--skill-accent)}
+      @media(max-width:980px){#skills .skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+      @media(max-width:640px){#skills .skills-grid{grid-template-columns:minmax(0,1fr);gap:14px}#skills .skill-card{padding:16px 17px 18px}#skills .skill-card-top{min-height:88px}#skills .skill-illustration{width:min(100%,210px)}}
+      @media(prefers-reduced-motion:reduce){#skills .skill-card{transition:none}#skills .skill-card:hover{transform:none}}
       /* projects */
       .pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:22px}
+      #qa-projects{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
       .pc{overflow:hidden;display:flex;flex-direction:column;transition:transform .2s;transform:perspective(900px) rotateX(var(--rx,0)) rotateY(var(--ry,0))}.pc:hover{border-color:var(--a1);box-shadow:0 24px 60px rgba(0,0,0,.3)}
       .pc .im{overflow:hidden;aspect-ratio:16/8;background:var(--bg2)}.pc img{width:100%;height:100%;object-fit:cover;transition:.6s}.pc:hover img{transform:scale(1.07)}
       .pb{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}.pb h3{font-size:17px;line-height:1.3}.pb p{font-size:13.5px;color:var(--dim);flex:1}
+      .project-highlights{display:grid;gap:7px;margin:0;padding-left:18px;color:var(--dim);font-size:13px;line-height:1.5}
       .tg{display:flex;flex-wrap:wrap;gap:6px}.tg span{font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;background:rgba(99,102,241,.16);color:var(--a1)}
       .test-meta{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:12px;padding-top:8px;border-top:1px solid var(--bd)}
       .test-meta span{font-size:11px;font-weight:600;line-height:1.5;color:var(--ink);opacity:.9}
       .pa{display:flex;flex-wrap:wrap;gap:8px}.pa a{font-size:12.5px;font-weight:700;padding:8px 14px;border-radius:10px;border:1px solid var(--bd);background:var(--card);transition:.2s}.pa a:hover{border-color:var(--a1);color:var(--a1)}
       .kind{font-size:10.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--a3)}
+      .project-group + .project-group{margin-top:36px}.project-group h3{font-size:20px;margin:0 0 16px}.project-group .pg:empty{display:none}
+      @media(max-width:980px){#qa-projects{grid-template-columns:repeat(2,minmax(0,1fr))}}
+      @media(max-width:640px){#qa-projects{grid-template-columns:minmax(0,1fr)}}
       /* exp */
       .tlm{position:relative;padding-left:26px;border-left:2px solid var(--bd)}.tlm::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--grad);box-shadow:0 0 14px var(--a2)}
       .tlm h4{font-size:17px}.tlm .co{color:var(--a1);font-weight:700;font-size:14px}.tlm .dt{font-size:12px;color:var(--dim);margin-bottom:8px}.tlm li{font-size:13.5px;color:var(--dim);margin-left:16px;margin-bottom:5px}
@@ -85,8 +125,9 @@
       .edu{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:20px}.edu h4{font-size:16px}.edu small{color:var(--dim)}.edu b{color:var(--ok)}
       $$(".btn.pri").forEach(b=>{b.addEventListener("mousemove",e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.15}px,${(e.clientY-r.top-r.height/2)*.25}px)`});b.addEventListener("mouseleave",()=>b.style.transform="")});
       /* contact */
-      .cw{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px}#cf{order:2}.cw .ci{order:1}.ci a,.ci div{display:flex;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid var(--bd);font-size:14px;transition:.2s}.ci a:hover{color:var(--a1);padding-left:6px}.ci i{font-style:normal;width:38px;height:38px;border-radius:11px;background:var(--grad);display:grid;place-items:center}.ci small{display:block;color:var(--dim);font-size:11px}
-      form{display:grid;gap:12px}input,textarea{width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--bd);background:var(--card);color:var(--ink);font:inherit;font-size:14px}input:focus,textarea:focus{outline:2px solid var(--a1);border-color:transparent}#st{display:none;font-size:13px;color:var(--a1)}
+      .cw{display:grid;grid-template-columns:1fr 1.05fr;gap:18px;align-items:stretch;max-width:1080px;margin-inline:auto}#cf{order:2;display:grid;gap:10px;padding:18px;border-radius:20px;background:rgba(9,22,36,.86);border:1px solid rgba(148,162,210,.18);box-shadow:inset 0 1px 0 rgba(255,255,255,.04),0 18px 34px rgba(10,15,25,.18)}.cw .ci{order:1;background:rgba(9,22,36,.86);border:1px solid rgba(148,162,210,.18);padding:18px;border-radius:20px;box-shadow:inset 0 1px 0 rgba(255,255,255,.04),0 18px 34px rgba(10,15,25,.18)}.ci a,.ci div{display:grid;grid-template-columns:36px 1fr;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid rgba(151,171,206,.2);font-size:13px;transition:.2s}.ci a:hover{color:var(--a1);transform:translateX(4px)}.ci i{font-style:normal;width:36px;height:36px;border-radius:10px;background:var(--grad);display:grid;place-items:center;box-shadow:0 10px 20px rgba(99,102,241,.2)}.ci small{display:block;color:var(--dim);font-size:10px;font-weight:700;letter-spacing:.02em}.ci span{font-size:14px;font-weight:600;color:var(--ink)}
+      .ci small, .ci span { color: #fff; font-weight: 400; }
+      form{display:grid;gap:12px}input,textarea{width:100%;padding:16px 14px;border-radius:12px;border:1px solid rgba(146,163,197,.2);background:rgba(255,255,255,.02);color:var(--ink);font:inherit;font-size:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,.02)}input::placeholder,textarea::placeholder{color:rgba(214,223,239,.7)}input:focus,textarea:focus{outline:2px solid rgba(99,102,241,.5);border-color:transparent;background:rgba(255,255,255,.03)}#cf input,#cf textarea{padding:12px;border-radius:10px;font-size:14px}#cf textarea{min-height:120px}#cf .btn.pri{padding:12px 16px;border-radius:10px;font-size:16px}#st{display:none;font-size:13px;color:var(--a1)}
       footer{text-align:center;color:var(--dim);font-size:13px;padding:50px 0 30px}
       #top{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border-radius:50%;border:0;background:var(--grad);color:#fff;font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:.3s;z-index:40}#top.show{opacity:1;pointer-events:auto}
       .rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
@@ -97,8 +138,8 @@
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Grotesk:wght@600;700&display=swap");
       body{font-family:Inter,"Segoe UI",system-ui,sans-serif}h1,h2,.brand,.stat b{font-family:"Space Grotesk",Inter,"Segoe UI",sans-serif}
       .aurora::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--bd) 1px,transparent 1px),linear-gradient(90deg,var(--bd) 1px,transparent 1px);background-size:56px 56px;opacity:.35;mask-image:radial-gradient(ellipse at 50% 20%,#000 20%,transparent 70%)}
-      .hv{position:relative}.hv::before{content:"";position:absolute;width:120%;aspect-ratio:1;left:-10%;top:50%;translate:0 -50%;border-radius:50%;border:1px dashed var(--bd);animation:spin 40s linear infinite;pointer-events:none}
-      @keyframes spin{to{rotate:360deg}}
+      .hv{position:relative}
+      .profile-frame{position:relative;z-index:2}
       .fl{position:absolute;z-index:2;padding:8px 14px;border-radius:14px;font-size:12px;font-weight:800;background:var(--bg2);border:1px solid var(--bd);box-shadow:0 14px 34px rgba(0,0,0,.3);animation:bob 5s ease-in-out infinite}
       .fl.a{top:-18px;right:6%}.fl.b{bottom:-16px;left:-4%;animation-delay:-2s}.fl.c{bottom:22%;right:-4%;animation-delay:-3.5s}
       @keyframes bob{50%{transform:translateY(-10px)}}
@@ -228,8 +269,63 @@
         grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
         gap: 22px;
       }
+      .skill-icon.text-only {
+        padding-left: 14px;
+      }
+      .edu-secondary {
+        margin-top: 18px;
+        padding-top: 16px;
+        border-top: 1px solid var(--bd);
+      }
+      .development-projects {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      }
+      .pc.development .im {
+        aspect-ratio: 16 / 5;
+      }
+      .pc.development .pb {
+        padding: 16px;
+      }
+      .pc .im.project-plan {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding: 24px;
+        background: linear-gradient(125deg, rgba(20, 184, 166, 0.16), var(--bg2) 65%);
+      }
+      .pc .im.project-plan img {
+        width: 72px;
+        height: 72px;
+        flex: 0 0 72px;
+        object-fit: contain;
+        border-radius: 14px;
+      }
+      .pc:hover .im.project-plan img {
+        transform: none;
+      }
+      .project-plan div {
+        display: flex;
+        flex-direction: column;
+      }
+      .project-plan span {
+        color: var(--a1);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .project-plan strong {
+        font-size: 16px;
+      }
+      .project-plan small {
+        color: var(--dim);
+        font-size: 11px;
+      }
       @media (max-width: 640px) {
         .cw {
+          grid-template-columns: 1fr;
+        }
+        .development-projects {
           grid-template-columns: 1fr;
         }
       }
@@ -245,7 +341,8 @@
         <nav class="links">
           <a href="#home">Home</a><a href="#about">About</a
           ><a href="#skills">Skills</a><a href="#projects">Projects</a
-          ><a href="#experience">Experience</a><a href="#contact">Contact</a>
+          ><a href="#experience">Experience</a><a href="#certifications">Certifications</a
+          ><a href="#contact">Contact</a>
         </nav>
         <div class="tools">
           <div class="dots">
@@ -259,20 +356,21 @@
               class="dot"
               data-a="amber"
               style="background: #fbbf24"
-            ></span>
+            ></span
+            >
           </div>
           <button class="ib" id="tb" aria-label="Toggle theme">☀</button>
           <div class="rs">
             <button class="btn pri" id="rb">Resume ▾</button>
             <div class="rd" id="rd">
               <a
-                href="assets/Shiva_Kumara_SN_MCA.pdf"
+                href="assets/Shiva_Kumara_SN_Testing.pdf"
                 target="_blank"
                 rel="noopener"
                 >📄 View Resume</a
               ><a
-                href="assets/Shiva_Kumara_SN_MCA.pdf"
-                download="Shiva_Kumara_SN_MCA.pdf"
+                href="assets/Shiva_Kumara_SN_Testing.pdf"
+                download="Shiva_Kumara_SN_Testing.pdf"
                 >⇩ Download Resume</a
               >
             </div>
@@ -283,14 +381,36 @@
       <div class="mm" id="mm">
         <a href="#home">Home</a><a href="#about">About</a
         ><a href="#skills">Skills</a><a href="#projects">Projects</a
-        ><a href="#experience">Experience</a><a href="#contact">Contact</a
-        ><a href="assets/Shiva_Kumara_SN_MCA.pdf" target="_blank">📄 Resume</a>
+        ><a href="#experience">Experience</a><a href="#certifications">Certifications</a
+        ><a href="#contact">Contact</a
+        ><a href="assets/Shiva_Kumara_SN_Testing.pdf" target="_blank">📄 Resume</a>
         <div class="mobile-themes">
           <span>Color theme</span>
           <div class="dots" aria-label="Choose color theme">
-            <button class="dot on" type="button" data-a="spectrum" aria-label="Spectrum theme" aria-pressed="true" style="background:linear-gradient(135deg,#38bdf8,#a78bfa)"></button>
-            <button class="dot" type="button" data-a="teal" aria-label="Teal theme" aria-pressed="false" style="background:#2dd4bf"></button>
-            <button class="dot" type="button" data-a="amber" aria-label="Amber theme" aria-pressed="false" style="background:#fbbf24"></button>
+            <button
+              class="dot on"
+              type="button"
+              data-a="spectrum"
+              aria-label="Spectrum theme"
+              aria-pressed="true"
+              style="background: linear-gradient(135deg, #38bdf8, #a78bfa)"
+            ></button>
+            <button
+              class="dot"
+              type="button"
+              data-a="teal"
+              aria-label="Teal theme"
+              aria-pressed="false"
+              style="background: #2dd4bf"
+            ></button>
+            <button
+              class="dot"
+              type="button"
+              data-a="amber"
+              aria-label="Amber theme"
+              aria-pressed="false"
+              style="background: #fbbf24"
+            ></button>
           </div>
         </div>
       </div>
@@ -301,28 +421,24 @@
         <div class="hero">
           <div>
             <div class="tag">
-              <i></i> Open to hybrid &amp; remote roles · Bengaluru
+              <i></i> Open to On-site, Hybrid &amp; Remote Opportunities · Bengaluru
             </div>
-            <h1>Shiva Kumara <span>S N</span></h1>
-            <div class="hero-role">Test Engineer / QA Engineer</div>
-            <p class="lead hero-skills" tabindex="0">
-              SDLC • STLC • Manual Testing • Test Case Design • API Testing •
-              SQL • Defect Management
-            </p>
+            <h1>Test Engineer | Software Testing &amp; Quality Assurance</h1>
+            <div class="hero-skill-panel" aria-label="Core testing skills">
+              <p class="hero-tagline" aria-live="polite">
+                <span id="hero-typing">Manual Testing • STLC • Test Case Design • Test Execution • Defect Tracking • SQL • Azure DevOps</span><span class="cursor">|</span>
+              </p>
+            </div>
             <p class="lead">
-              MCA graduate focused on Software Testing and Quality Assurance. I
-              have hands-on experience in manual, API, and Selenium automation
-              testing, including functional, regression, smoke, and sanity
-              testing. I design test cases, identify defects, validate APIs and
-              databases, and report issues clearly.
+              MCA graduate focused on Software Testing and Quality Assurance, with practical experience in manual testing, test case design, test execution, defect reporting, API testing, and SQL. Familiar with SDLC, STLC, regression testing, and testing documentation. Interested in analyzing requirements, preparing test data, validating application functionality, and helping deliver reliable software.
             </p>
             <div class="cta">
               <a class="btn pri" href="#projects">View Projects →</a
               ><a class="btn" href="#contact">Hire Me</a>
             </div>
             <div class="pills">
-              <span>📞 +91 6363970312</span
-              ><span>✉ shivushivakumarsn064@gmail.com</span
+              <a class="contact-chip" href="tel:+916363970312">+91 6363970312</a
+              ><a href="https://mail.google.com/mail/?view=cm&amp;to=shivushivakumarsn064%40gmail.com" target="_blank" rel="noopener">✉ shivushivakumarsn064@gmail.com</a
               ><a
                 class="btn"
                 style="padding: 6px 12px"
@@ -337,21 +453,14 @@
                 target="_blank"
                 rel="noopener"
                 >GitHub</a
-              ><a
-                class="btn"
-                style="padding: 6px 12px"
-                href="https://wa.me/916363970312"
-                target="_blank"
-                rel="noopener"
-                >WhatsApp</a
               >
             </div>
           </div>
           <div class="hv">
             <div class="profile-frame">
               <img
-                src="assets/profile-photo.png"
-                alt="Portrait of Shiva Kumara S N"
+                src="assets/profile-network-graphic.png"
+                alt="Portrait of Shiva Kumara S N with a blue particle network frame"
               />
             </div>
           </div>
@@ -368,31 +477,20 @@
             <div class="eb" data-n="01">About</div>
             <h2>Turning curiosity into quality.</h2>
             <p style="color: var(--dim)">
-              I am an MCA graduate passionate about Software Testing and Quality
-              Assurance. I enjoy understanding requirements, creating meaningful
-              test cases, exploring different scenarios, and identifying defects
-              before they affect users. I have hands-on practice in Manual
-              Testing, API Testing, SQL, and Selenium automation, along with a
-              strong interest in learning and improving my testing skills.
+              I am an MCA graduate pursuing an entry-level career in Software Testing and Quality Assurance. I have practical project experience in manual testing, test case design and execution, defect reporting, regression testing, API testing, and SQL-based data validation.
             </p>
             <p style="color: var(--dim)">
-              I believe good testing is not only about finding bugs — it is
-              about understanding the product, thinking from the user's
-              perspective, and helping deliver reliable software.
+              I understand SDLC and STLC fundamentals and am familiar with preparing test scenarios, test cases, and test data; documenting test results; and reporting defects with clear reproduction steps. I am also developing my automation testing skills using Selenium WebDriver with Python.
             </p>
-            <div class="quote">
-              “Understand the requirement. Test every possibility. Deliver with
-              confidence.”
-            </div>
+            <p style="color: var(--dim)">
+              I am looking to contribute to a QA team by analyzing requirements, executing test cases, identifying defects, and helping deliver reliable software.
+            </p>
           </div>
           <div class="stats rv">
-            <div class="glass stat">
-              <b data-to="5">0</b><small>Projects</small>
-            </div>
-            <div class="glass stat">
-              <b data-to="5">0</b><small>Certifications</small>
-            </div>
             <div class="glass stat"><b>8.42</b><small>MCA CGPA</small></div>
+            <div class="glass stat"><b>Manual Testing</b><small>Primary Focus</small></div>
+            <div class="glass stat"><b>Test Planning</b><small>Clear Coverage</small></div>
+            <div class="glass stat"><b>Test Reporting</b><small>Documented Results</small></div>
           </div>
         </div>
       </section>
@@ -400,237 +498,136 @@
       <section id="skills">
         <div class="eb" data-n="02">Skills</div>
         <h2>Skills</h2>
-        <div class="skill-groups">
-          <div class="skill-group">
-            <h3>Manual Testing</h3>
-            <div class="skill-icon-grid">
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/manual-testing.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>Manual Testing</span>
-              </article>
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/functional-testing.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>Functional Testing</span>
-              </article>
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/regression-testing.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>Regression Testing</span>
-              </article>
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/smoke-testing.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>Smoke Testing</span>
-              </article>
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/sanity-testing.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>Sanity Testing</span>
-              </article>
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/integration-testing.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>Integration Testing</span>
-              </article>
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/retesting.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>Retesting</span>
-              </article>
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/api-testing.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>API Testing</span>
-              </article>
+        <p class="sub">Tools and technologies I use to build, test and deliver quality software.</p>
+        <div class="skills-grid" aria-label="Testing skills">
+          <article class="skill-card" aria-labelledby="skill-manual-title">
+            <div class="skill-card-top">
+              <svg class="skill-illustration" viewBox="0 0 230 100" aria-hidden="true">
+                <rect x="24" y="19" width="104" height="67" rx="8" fill="#0b2850" stroke="#38bdf8" stroke-width="3"/>
+                <rect x="32" y="27" width="88" height="51" rx="3" fill="#07172f"/>
+                <path d="M15 89h122l-12 7H25z" fill="#1265a1" stroke="#38bdf8" stroke-width="2"/>
+                <rect x="43" y="36" width="13" height="13" rx="3" fill="#0ea5e9"/><path d="m46 42 3 3 6-7" fill="none" stroke="#fff" stroke-width="2"/>
+                <path d="M63 40h39M63 47h30" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
+                <rect x="43" y="57" width="13" height="13" rx="3" fill="#0ea5e9"/><path d="m46 63 3 3 6-7" fill="none" stroke="#fff" stroke-width="2"/>
+                <path d="M63 61h39M63 68h24" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="139" cy="63" r="17" fill="#092545" stroke="#38bdf8" stroke-width="4"/><path d="m151 76 16 14" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/>
+                <circle cx="183" cy="34" r="12" fill="#0b2850" stroke="#60a5fa" stroke-width="4"/><path d="M183 16v7m0 22v7m18-18h-7m-22 0h-7m31-13-5 5m-16 16-5 5m26 0-5-5m-16-16-5-5" stroke="#60a5fa" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+              <span class="skill-number" aria-hidden="true">01</span>
             </div>
-          </div>
-          <div class="skill-group">
-            <h3>Test Management</h3>
-            <div class="skill-icon-grid">
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/test-case-scenario-design.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>Test Case Scenario Design</span>
-              </article>
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/defect-reporting.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>Defect Reporting</span>
-              </article>
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/bug-life-cycle.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>Bug Life Cycle</span>
-              </article>
+            <h3 id="skill-manual-title">Manual Testing</h3>
+            <p>Performing hands-on testing to ensure application quality and reliability.</p>
+            <ul class="skill-list">
+              <li>Functional Testing</li><li>Smoke Testing</li><li>Sanity Testing</li>
+              <li>Regression Testing</li><li>Retesting</li><li>Integration Testing</li>
+            </ul>
+          </article>
+          <article class="skill-card" aria-labelledby="skill-fundamentals-title">
+            <div class="skill-card-top">
+              <svg class="skill-illustration" viewBox="0 0 230 100" aria-hidden="true">
+                <path d="M48 15h91a8 8 0 0 1 8 8v66H40V23a8 8 0 0 1 8-8Z" fill="#103b48" stroke="#20D5C2" stroke-width="3"/>
+                <path d="M57 15v-5h26l8 8h31v8H57z" fill="#155c62" stroke="#8be7da" stroke-width="2"/>
+                <path d="M62 39h52M62 58h52M62 77h40" stroke="#69cbbf" stroke-width="3" stroke-linecap="round"/>
+                <rect x="50" y="34" width="10" height="10" rx="2" fill="#159d92"/><path d="m52 39 2 2 4-5" fill="none" stroke="#fff" stroke-width="2"/>
+                <rect x="50" y="53" width="10" height="10" rx="2" fill="#159d92"/><path d="m52 58 2 2 4-5" fill="none" stroke="#fff" stroke-width="2"/>
+                <rect x="50" y="72" width="10" height="10" rx="2" fill="#159d92"/><path d="m52 77 2 2 4-5" fill="none" stroke="#fff" stroke-width="2"/>
+                <path d="m153 68 31-39a7 7 0 0 1 11 9l-31 39-16 7z" fill="#168f87" stroke="#8be7da" stroke-width="3"/>
+                <path d="m179 35 11 9M152 68l12 9" stroke="#d5fff8" stroke-width="3"/>
+                <circle cx="193" cy="78" r="12" fill="#155c62" stroke="#20D5C2" stroke-width="3"/><path d="M193 60v-5m0 46v-5m18-18h-5m-26 0h-5m38-13-4 4m-30 30-4 4m38 0-4-4m-30-30-4-4" stroke="#20D5C2" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+              <span class="skill-number" aria-hidden="true">02</span>
             </div>
-          </div>
-          <div class="skill-group">
-            <h3>Automation</h3>
-            <div class="skill-icon-grid">
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/selenium-webdriver.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>Selenium WebDriver</span>
-              </article>
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/python.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>Python</span>
-              </article>
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/pytest.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>PyTest</span>
-              </article>
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/page-object-model.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>POM (Basic)</span>
-              </article>
+            <h3 id="skill-fundamentals-title">Testing Fundamentals</h3>
+            <p>Understanding core testing concepts and processes.</p>
+            <ul class="skill-list">
+              <li>SDLC</li><li>STLC</li><li>Test Scenario Design</li>
+              <li>Test Case Design and Execution</li><li>Test Data Preparation</li>
+            </ul>
+          </article>
+          <article class="skill-card" aria-labelledby="skill-defect-title">
+            <div class="skill-card-top">
+              <svg class="skill-illustration" viewBox="0 0 230 100" aria-hidden="true">
+                <rect x="20" y="18" width="132" height="70" rx="8" fill="#082e3d" stroke="#2dd4bf" stroke-width="3"/>
+                <rect x="28" y="26" width="116" height="53" rx="4" fill="#071d31"/>
+                <path d="M36 39h44m-44 12h31m-31 12h50" stroke="#0e7490" stroke-width="3" stroke-linecap="round"/>
+                <path d="M105 48c0-8 7-14 15-14s15 6 15 14v13c0 9-7 16-15 16s-15-7-15-16z" fill="#ef4444" stroke="#fb7185" stroke-width="3"/>
+                <circle cx="113" cy="53" r="3" fill="#111827"/><circle cx="127" cy="53" r="3" fill="#111827"/>
+                <path d="m104 44-8-6m9 19-11 1m38-14 8-6m-9 19 11 1M111 35l-3-8m16 8 3-8m-14 50-4 7m15-7 4 7" stroke="#fb7185" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="168" cy="65" r="17" fill="#083344" stroke="#2dd4bf" stroke-width="4"/><path d="m180 78 16 14" stroke="#2dd4bf" stroke-width="7" stroke-linecap="round"/>
+                <path d="m190 20 14 25h-28z" fill="#fb7185" stroke="#fecdd3" stroke-width="2"/><path d="M190 28v8m0 4v1" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+              <span class="skill-number" aria-hidden="true">03</span>
             </div>
-          </div>
-          <div class="skill-group">
-            <h3>Tools</h3>
-            <div class="skill-icon-grid">
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/jira.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>Jira</span>
-              </article>
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/postman.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>Postman</span>
-              </article>
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/git.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>Git</span>
-              </article>
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/github.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>GitHub</span>
-              </article>
+            <h3 id="skill-defect-title">Defect Management</h3>
+            <p>Tracking and managing defects throughout the software lifecycle.</p>
+            <ul class="skill-list">
+              <li>Bug Life Cycle</li><li>Defect Reporting and Tracking</li><li>Severity and Priority</li>
+            </ul>
+          </article>
+          <article class="skill-card" aria-labelledby="skill-database-title">
+            <div class="skill-card-top">
+              <svg class="skill-illustration" viewBox="0 0 230 100" aria-hidden="true">
+                <ellipse cx="69" cy="22" rx="38" ry="12" fill="#fbbf24" stroke="#fde68a" stroke-width="2"/>
+                <path d="M31 22v47c0 7 17 13 38 13s38-6 38-13V22" fill="#b45309" stroke="#fbbf24" stroke-width="3"/>
+                <path d="M31 42c0 7 17 13 38 13s38-6 38-13M31 59c0 7 17 13 38 13s38-6 38-13" fill="none" stroke="#fde68a" stroke-width="2"/>
+                <ellipse cx="69" cy="22" rx="25" ry="6" fill="#f59e0b"/>
+                <rect x="114" y="34" width="80" height="48" rx="8" fill="#0b2344" stroke="#38bdf8" stroke-width="3" transform="rotate(-7 154 58)"/>
+                <text x="124" y="65" fill="#dbeafe" font-size="21" font-family="Segoe UI, sans-serif" font-weight="800">SQL</text>
+                <path d="M129 26h53" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="47" cy="23" r="2" fill="#fff7ed"/><circle cx="88" cy="24" r="2" fill="#fff7ed"/>
+                <path d="M162 27h37m-29-7 7 7-7 7" fill="none" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="skill-number" aria-hidden="true">04</span>
             </div>
-          </div>
-          <div class="skill-group">
-            <h3>Database</h3>
-            <div class="skill-icon-grid">
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/sql.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>SQL</span>
-              </article>
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/mysql.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>MySQL</span>
-              </article>
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/postgresql.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>PostgreSQL</span>
-              </article>
+            <h3 id="skill-database-title">Database</h3>
+            <p>Working with databases to validate data and ensure accuracy.</p>
+            <ul class="skill-list">
+              <li>SQL</li><li>Microsoft SQL Server (MS SQL)</li><li>MySQL</li><li>PostgreSQL</li>
+            </ul>
+          </article>
+          <article class="skill-card" aria-labelledby="skill-tools-title">
+            <div class="skill-card-top">
+              <svg class="skill-illustration" viewBox="0 0 230 100" aria-hidden="true">
+                <rect x="17" y="16" width="138" height="75" rx="9" fill="#08284a" stroke="#3B9EFF" stroke-width="3"/>
+                <rect x="25" y="24" width="122" height="57" rx="4" fill="#07172f"/>
+                <path d="M42 39h54M42 49h85M42 59h61" stroke="#1676a5" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="35" cy="39" r="3" fill="#3B9EFF"/><circle cx="35" cy="49" r="3" fill="#60a5fa"/><circle cx="35" cy="59" r="3" fill="#a78bfa"/>
+                <path d="M13 93h146l-11 5H23z" fill="#075985" stroke="#3B9EFF" stroke-width="2"/>
+                <rect x="48" y="67" width="21" height="19" rx="5" fill="#0284c7"/><path d="m59 71-5 6 5 5m0-11 5 6-5 5" fill="none" stroke="#fff" stroke-width="2"/>
+                <rect x="84" y="67" width="21" height="19" rx="5" fill="#0e7490"/><path d="m90 81 9-10m-5-1 6 1-1 6" fill="none" stroke="#cffafe" stroke-width="2"/>
+                <path d="M183 24 199 40l-16 16-16-16z" fill="#0e7490" stroke="#67e8f9" stroke-width="2"/><path d="m179 40 4 4 8-9" fill="none" stroke="#fff" stroke-width="3"/>
+                <circle cx="190" cy="73" r="14" fill="#0b2344" stroke="#3B9EFF" stroke-width="3"/><path d="m185 73 4 4 7-9" fill="none" stroke="#bae6fd" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+              <span class="skill-number" aria-hidden="true">05</span>
             </div>
-          </div>
-          <div class="skill-group">
-            <h3>Methodologies</h3>
-            <div class="skill-icon-grid">
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/sdlc.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>SDLC</span>
-              </article>
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/stlc.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>STLC</span>
-              </article>
-              <article class="glass skill-icon">
-                <img
-                  src="assets/skills/agile-methodology.svg"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                /><span>Agile Methodology</span>
-              </article>
+            <h3 id="skill-tools-title">Testing Tools</h3>
+            <p>Using tools to manage, track, and collaborate on testing activities.</p>
+            <ul class="skill-list">
+              <li>Azure DevOps</li><li>Postman</li><li>Jira</li><li>Git</li><li>GitHub</li>
+            </ul>
+          </article>
+          <article class="skill-card" aria-labelledby="skill-automation-title">
+            <div class="skill-card-top">
+              <svg class="skill-illustration" viewBox="0 0 230 100" aria-hidden="true">
+                <rect x="18" y="21" width="126" height="65" rx="8" fill="#102c4d" stroke="#20D5C2" stroke-width="3"/>
+                <rect x="27" y="29" width="108" height="48" rx="3" fill="#080f2d"/>
+                <path d="M12 89h139l-10 7H22z" fill="#126b78" stroke="#20D5C2" stroke-width="2"/>
+                <path d="m47 48-10 8 10 8m17-16 10 8-10 8m14 3 13-23" fill="none" stroke="#93c5fd" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="157" y="39" width="34" height="34" rx="8" fill="#16803c" stroke="#86efac" stroke-width="2"/>
+                <text x="163" y="63" fill="#fff" font-size="20" font-family="Segoe UI, sans-serif" font-weight="800">Se</text>
+                <path d="m175 39 8-8 8 8" fill="none" stroke="#86efac" stroke-width="3" stroke-linecap="round"/>
+                <path d="M203 28c-10 0-16 7-16 16 0 7 4 11 9 13l-3 6 9-1c10-1 16-8 16-17 0-10-6-17-15-17Z" fill="#2563eb" stroke="#93c5fd" stroke-width="2"/>
+                <text x="193" y="49" fill="#fff" font-size="14" font-family="Segoe UI, sans-serif" font-weight="800">Py</text>
+                <circle cx="153" cy="19" r="10" fill="#155c62" stroke="#20D5C2" stroke-width="3"/><path d="M153 4v4m0 22v4m15-15h-4m-22 0h-4m26-11-3 3m-16 16-3 3m22 0-3-3m-16-16-3-3" stroke="#20D5C2" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+              <span class="skill-number" aria-hidden="true">06</span>
             </div>
-          </div>
+            <h3 id="skill-automation-title">Automation Testing</h3>
+            <p>Automating test scenarios to improve efficiency and coverage.</p>
+            <ul class="skill-list">
+              <li>Selenium WebDriver with Python — Basics</li>
+            </ul>
+          </article>
         </div>
       </section>
 
@@ -638,9 +635,16 @@
         <div class="eb" data-n="03">Work</div>
         <h2>Projects</h2>
         <p class="sub">
-          Hands-on testing and building on real-world applications.
+          Software testing projects focused on test design, execution, defect tracking, and quality validation.
         </p>
-        <div class="pg" id="pg"></div>
+        <div class="project-group" aria-labelledby="qa-projects-heading">
+          <h3 id="qa-projects-heading">Testing &amp; QA Projects</h3>
+          <div class="pg" id="qa-projects"></div>
+        </div>
+        <div class="project-group" aria-labelledby="development-projects-heading">
+          <h3 id="development-projects-heading">Other Development Projects</h3>
+          <div class="pg development-projects" id="development-projects"></div>
+        </div>
       </section>
 
       <section id="experience">
@@ -652,15 +656,15 @@
               <div class="tlm">
                 <h4>Python Full Stack Developer Intern</h4>
                 <div class="co">TriPillar Solutions LLP</div>
-                <div class="dt">Oct 2025 – Nov 2025</div>
+                <div class="dt">October 2025 – November 2025</div>
                 <ul>
                   <li>
-                    <b>GoServe, a food delivery platform:</b> built a responsive
-                    web app with Python, HTML, CSS and JavaScript.
+                    Contributed to developing the GoServe food delivery platform
+                    using Python, HTML, CSS, and JavaScript.
                   </li>
                   <li>
-                    Worked on backend development, API integration and testing,
-                    PostgreSQL and Git version control.
+                    Gained experience with API integration, PostgreSQL database
+                    operations, and Git version control.
                   </li>
                 </ul>
                 <a
@@ -682,56 +686,60 @@
                 <div>
                   <h4>Master of Computer Applications (MCA)</h4>
                   <small>Sapthagiri NPS University, Autonomous</small><br /><b
-                    >CGPA 8.42</b
+                    >CGPA: 8.42</b
                   >
                 </div>
                 <h4>2026</h4>
               </div>
-              <ul class="cl">
-                <li>
-                  Complete 2026 Software Testing Bootcamp · Udemy
-                  <a
-                    href="https://ude.my/UC-983bc148-27e5-4867-959b-fb64a01ccd23"
-                    target="_blank"
-                    rel="noopener"
-                    >View</a
-                  >
-                </li>
-                <li>
-                  Introduction to Database and SQL · Great Learning
-                  <a
-                    href="https://www.mygreatlearning.com/certificate/FSLMECNH"
-                    target="_blank"
-                    rel="noopener"
-                    >View</a
-                  >
-                </li>
-                <li>Fundamentals of Software Testing · Infosys Springboard</li>
-                <li>Python Fundamentals · Infosys Springboard</li>
-                <li>Edge Computing · NPTEL (70% Elite)</li>
-              </ul>
+              <div class="edu edu-secondary">
+                <div>
+                  <h4>Bachelor of Computer Applications (BCA)</h4>
+                  <small>First Grade Government College, Bangalore University</small>
+                  <br /><b>CGPA: 7.00</b>
+                </div>
+                <h4>2024</h4>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      <section id="certifications">
+        <div class="eb" data-n="05">Certifications</div>
+        <h2>Certifications</h2>
+        <div class="glass pad rv">
+          <ul class="cl">
+            <li>
+              Complete 2026 Software Testing Bootcamp – Udemy
+              <a href="https://ude.my/UC-983bc148-27e5-4867-959b-fb64a01ccd23" target="_blank" rel="noopener">View</a>
+            </li>
+            <li>
+              Introduction to Database and SQL – Great Learning
+              <a href="https://www.mygreatlearning.com/certificate/FSLMECNH" target="_blank" rel="noopener">View</a>
+            </li>
+            <li>Fundamentals of Software Testing – Infosys Springboard</li>
+            <li>Python Fundamentals – Infosys Springboard</li>
+          </ul>
+        </div>
+      </section>
+
       <section id="contact">
-        <div class="eb" data-n="05">Contact</div>
+        <div class="eb" data-n="06">Contact</div>
         <h2>Let's work together</h2>
         <p class="sub">
-          Open to new opportunities, collaborations and interesting projects.
+          Open to Test Engineer opportunities in Bengaluru.
         </p>
         <div class="cw">
           <div class="glass pad ci rv">
             <div>
-              <i>📞</i><span><small>Phone</small>+91 6363970312</span>
+              <i>📞</i><span><small>Phone</small><a href="tel:+916363970312">+91 6363970312</a></span>
             </div>
             <div>
               <i>📍</i><span><small>Location</small>Bengaluru, Karnataka</span>
             </div>
             <div>
               <i>✉</i
-              ><span><small>Email</small>shivushivakumarsn064@gmail.com</span>
+              ><span><small>Email</small><a href="https://mail.google.com/mail/?view=cm&amp;to=shivushivakumarsn064%40gmail.com" target="_blank" rel="noopener">shivushivakumarsn064@gmail.com</a></span>
             </div>
             <a
               href="https://www.linkedin.com/in/shiva-kumara-s-n-398630319/"
@@ -743,16 +751,15 @@
               target="_blank"
               rel="noopener"
               ><i>⌥</i><span><small>GitHub</small>github.com/Shivu6573</span></a
-            ><a href="https://wa.me/916363970312" target="_blank" rel="noopener"
-              ><i>✆</i
-              ><span><small>WhatsApp</small>Message me on WhatsApp</span></a
             >
           </div>
-          <form class="glass pad rv" id="cf" novalidate>
+          <form class="glass pad rv" id="cf">
             <input id="cn" placeholder="Your name" required /><input
               id="ce"
               type="email"
               placeholder="Your email"
+              pattern=".+@.+\..+"
+              title="Enter a valid email address, such as name@example.com."
               required
             /><textarea
               id="cm"
@@ -786,6 +793,7 @@
         amber: ["#fbbf24", "#f97316", "#f472b6"],
       };
       function acc(k) {
+        if (!AC[k]) k = "spectrum";
         ["--a1", "--a2", "--a3"].forEach((v, i) =>
           root.style.setProperty(v, AC[k][i]),
         );
@@ -824,77 +832,82 @@
       /* projects */
       const P = [
         [
+          "QA Testing",
+          "OrangeHRM Web Application Testing",
+          "assets/orangehrm-qa-testing.svg",
+          "",
+          ["Manual Testing", "API Testing", "SQL", "Postman", "Azure DevOps"],
+          "https://opensource-demo.orangehrmlive.com/",
+          "https://shivu6573.github.io/Shivu-Portfolio/OrangeHRM-Testing-Project.zip",
+          ["15 Test Cases", "15 Passed", "3 Modules Tested", "3 API Tests", "5 SQL Tests"],
+          [
+            "Analysed application workflows and created test scenarios and test cases for Login, Employee, and Admin modules.",
+            "Executed Functional, Smoke, Regression, and Sanity testing; documented test execution results and screenshots.",
+            "Tested REST APIs using Postman and executed SQL queries to validate application data.",
+            "Used Azure DevOps to manage test cases, record execution results, and track defects.",
+          ],
+        ],
+        [
+          "QA Testing",
+          "Script Labs – QA Testing Platform",
+          "assets/script-labs-qa-platform.svg",
+          "",
+          ["Manual Testing", "SQL", "Jira"],
+          "https://labs.hendri.me/",
+          "https://shivu6573.github.io/Shivu-Portfolio/Script%20Labs%20-%20QA%20Testing%20Platform.zip",
+          ["20 Test Cases", "19 Passed", "1 Failed", "4 SQL Tests", "Jira Defect Logged"],
+          [
+            "Created and executed test cases for Login, CRUD, Product, Cart, and Checkout workflows.",
+            "Performed Functional testing, recorded actual results, and compared them with expected results.",
+            "Logged and tracked BUG_001 in Jira with defect details for troubleshooting.",
+            "Executed SQL queries to validate product data and documented test results.",
+          ],
+        ],
+        [
           "Automation Testing",
-          "SaaS Subscription &amp; Administration Platform",
+          "SaaS Subscription & Administration Platform",
           "assets/automation-testing-screenshot.png",
-          "Automated functional tests for login, user management and subscription workflows with Selenium WebDriver and PyTest. Used the Page Object Model, assertions and explicit waits, covered positive and negative scenarios, and kept the code in Git/GitHub.",
-          ["Python", "Selenium", "PyTest", "POM"],
+          "Built basic test automation for login, user management, and subscription workflows using Selenium WebDriver, PyTest, and the Page Object Model. Used assertions to validate application behavior as a beginner-level automation practice.",
+          ["Selenium (Basic)", "Python (Basic)", "PyTest (Basic)", "POM (Basic)"],
           "https://saas.anointedcoder.com/",
           "SaaS-Automation-Testing.zip",
-        ],
-        [
-          "QA Testing",
-          "OrangeHRM: Web Application Testing",
-          "assets/orangehrm-qa-testing.svg",
-          "Wrote test scenarios and cases for key HR workflows. Ran functional, smoke, regression and sanity tests, checked REST requests and responses in Postman, validated sample records with SQL and captured screenshot evidence.",
-          ["Manual", "API", "SQL", "Postman"],
-          "https://opensource-demo.orangehrmlive.com/",
-          "OrangeHRM-Testing-Project.zip",
-        ],
-        [
-          "QA Testing",
-          "Script Labs: QA Testing Platform",
-          "assets/script-labs-qa-platform.svg",
-          "Created and ran test cases for login, CRUD, product, cart and checkout flows. Did functional, smoke, regression and UI testing, tracked defects in Jira and checked data with SQL.",
-          ["Manual", "SQL", "Jira"],
-          "https://labs.hendri.me/",
-          "Script Labs - QA Testing Platform.zip",
         ],
         [
           "Full-Stack Build",
           "Skill Verse: AI-Powered Learning Platform",
           "assets/skill-verse-ai-learning.svg",
-          "Full-stack learning platform with student and admin roles, courses and quizzes. Added the SmartBot AI chatbot and course recommendations via an Open API, plus a leaderboard, progress tracking, authentication and an admin dashboard on MongoDB.",
+          "Full-stack learning platform with student and admin roles, courses and quizzes, SmartBot AI chatbot, recommendations, leaderboard, progress tracking and an admin dashboard on MongoDB.",
           ["Flask", "MongoDB", "Open API"],
         ],
         [
           "Full-Stack Build",
           "Nexus Board: Task Management System",
           "assets/nexus-board-task-management.svg",
-          "Collaborative task platform with secure authentication, role-based access, task tracking, search and REST API integration, backed by an optimized PostgreSQL database.",
+          "Collaborative task platform with authentication, role-based access, task tracking, search and REST API integration, backed by PostgreSQL.",
           ["Flask", "PostgreSQL", "REST"],
         ],
       ];
-      const projectStats = {
-        "SaaS Subscription &amp; Administration Platform": [
-          "🧪 8 Automated Tests",
-          "✅ 8 Passed",
-          "❌ 0 Failed",
-          "📋 8 Test Scenarios",
-          "📸 8 Screenshots",
-        ],
-        "OrangeHRM: Web Application Testing": [
-          "🧪 15 Test Cases",
-          "✅ 15 Passed",
-          "📋 3 Modules Tested",
-          "🔌 3 API Tests",
-          "🗄️ 5 SQL Tests",
-          "🐞 0 Defects",
-        ],
-        "Script Labs: QA Testing Platform": [
-          "🧪 20 Test Cases",
-          "✅ 19 Passed",
-          "❌ 1 Failed",
-          "🗄️ 4 SQL Tests",
-          "🐞 Jira Defect",
-        ],
-      };
-      $("#pg").innerHTML = P.map((p) => {
-        const stats = projectStats[p[1]]
-          ? `<div class="test-meta">${projectStats[p[1]].map((s) => `<span>${s}</span>`).join("")}</div>`
-          : "";
-        return `<article class="glass pc rv"><div class="im"><img src="${p[2]}" alt="${p[1]}" loading="lazy"/></div><div class="pb"><div class="kind">${p[0]}</div><h3>${p[1]}</h3><p>${p[3]}</p><div class="tg">${p[4].map((t) => `<span>${t}</span>`).join("")}</div>${stats}<div class="pa"><a href="https://github.com/Shivu6573" target="_blank" rel="noopener">GitHub</a>${p[5] ? `<a href="${p[5]}" target="_blank" rel="noopener">🔗 Live app</a>` : ""}${p[6] ? `<a href="${p[6]}" download>🧪 Test documentation</a>` : ""}</div></div></article>`;
-      }).join("");
+      function renderProjects(projects) {
+        return projects.map((p) => {
+          const development = p[0] === "Full-Stack Build";
+          const stats = p[7]
+            ? `<div class="test-meta" aria-label="Verified project statistics">${p[7].map((stat) => `<span>${stat}</span>`).join("")}</div>`
+            : "";
+          const documentation = p[6]
+            ? `<a href="${p[6]}" ${p[6].startsWith("http") ? 'target="_blank" rel="noopener"' : "download"}>↓ Documentation</a>`
+            : "";
+          const details = p[8]
+            ? `<ul class="project-highlights">${p[8].map((item) => `<li>${item}</li>`).join("")}</ul>`
+            : `<p>${p[3]}</p>`;
+          return `<article class="glass pc rv${development ? " development" : ""}"><div class="im"><img src="${p[2]}" alt="${p[1]}" loading="lazy" decoding="async"/></div><div class="pb"><div class="kind">${p[0]}</div><h3>${p[1]}</h3>${details}<div class="tg">${p[4].map((t) => `<span>${t}</span>`).join("")}</div>${stats}<div class="pa"><a href="https://github.com/Shivu6573" target="_blank" rel="noopener">GitHub</a>${p[5] ? `<a href="${p[5]}" target="_blank" rel="noopener">↗ Live Application</a>` : ""}${documentation}</div></div></article>`;
+        }).join("");
+      }
+      $("#qa-projects").innerHTML = renderProjects(
+        P.filter((p) => p[0] !== "Full-Stack Build"),
+      );
+      $("#development-projects").innerHTML = renderProjects(
+        P.filter((p) => p[0] === "Full-Stack Build"),
+      );
       $$(".pc").forEach((c) => {
         c.onmousemove = (e) => {
           const r = c.getBoundingClientRect();
@@ -963,6 +976,34 @@
         g.style.left = e.clientX + "px";
         g.style.top = e.clientY + "px";
       });
+      const heroTyping = document.getElementById("hero-typing");
+      const heroSkills = [
+        "Manual Testing • STLC • Test Case Design • Test Execution • Defect Tracking • SQL • Azure DevOps",
+      ];
+      let heroTextIndex = 0;
+      let heroCharIndex = 0;
+      let heroDeleting = false;
+      function typeHeroSkill() {
+        if (!heroTyping) return;
+        const fullText = heroSkills[heroTextIndex];
+        if (!heroDeleting) {
+          heroCharIndex++;
+        } else {
+          heroCharIndex--;
+        }
+
+        heroTyping.textContent = fullText.slice(0, heroCharIndex);
+
+        if (!heroDeleting && heroCharIndex === fullText.length) {
+          heroDeleting = true;
+          return;
+        }
+        if (heroDeleting && heroCharIndex === 0) {
+          heroDeleting = false;
+          heroTextIndex = (heroTextIndex + 1) % heroSkills.length;
+        }
+      }
+      setInterval(typeHeroSkill, 35);
       /* contact */
       $("#cf").onsubmit = (e) => {
         e.preventDefault();
