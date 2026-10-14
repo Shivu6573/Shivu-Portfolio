@@ -63,7 +63,7 @@
       .pills>a:not(.btn),.pills>.contact-chip{display:inline-flex;align-items:center;gap:9px;padding:10px 14px;border:1px solid var(--bd);border-radius:14px;background:linear-gradient(135deg,var(--card),rgba(56,189,248,.07));box-shadow:0 8px 22px rgba(0,0,0,.12);font-size:clamp(13px,1.15vw,15px);font-weight:700;color:var(--ink);transition:transform .22s,border-color .22s,box-shadow .22s}
       .pills>a:not(.btn):hover{transform:translateY(-3px);border-color:var(--a1);box-shadow:0 12px 28px rgba(56,189,248,.16)}
       .pills>a:not(.btn):focus-visible{outline:2px solid var(--a1);outline-offset:3px}
-      .profile-frame{position:relative;z-index:2;width:min(100%,320px);max-width:320px;aspect-ratio:1;margin-inline:auto;padding:0;border-radius:50%;border:none;background:transparent;box-shadow:none;overflow:hidden}
+      .profile-frame{position:relative;z-index:2;width:min(100%,260px);max-width:260px;aspect-ratio:1;margin-inline:auto;padding:0;border-radius:50%;border:none;background:transparent;box-shadow:none;overflow:hidden}
       .profile-frame img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:50%;filter:none;background:var(--bg2)}
       .quality-strip{border-block:1px solid var(--bd);padding:14px 10px;text-align:center;color:var(--ink);font-size:14px;font-weight:700;line-height:1.6}
       /* stats / about */
@@ -108,11 +108,13 @@
       #qa-projects{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
       .pc{overflow:hidden;display:flex;flex-direction:column;transition:transform .2s;transform:perspective(900px) rotateX(var(--rx,0)) rotateY(var(--ry,0))}.pc:hover{border-color:var(--a1);box-shadow:0 24px 60px rgba(0,0,0,.3)}
       .pc .im{overflow:hidden;aspect-ratio:16/8;background:var(--bg2)}.pc img{width:100%;height:100%;object-fit:cover;transition:.6s}.pc:hover img{transform:scale(1.07)}
+      .pc.upcoming .im{aspect-ratio:16/8}
       .pb{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}.pb h3{font-size:17px;line-height:1.3}.pb p{font-size:13.5px;color:var(--dim);flex:1}
       .project-highlights{display:grid;gap:7px;margin:0;padding-left:18px;color:var(--dim);font-size:13px;line-height:1.5}
       .tg{display:flex;flex-wrap:wrap;gap:6px}.tg span{font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;background:rgba(99,102,241,.16);color:var(--a1)}
       .test-meta{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:12px;padding-top:8px;border-top:1px solid var(--bd)}
       .test-meta span{font-size:11px;font-weight:600;line-height:1.5;color:var(--ink);opacity:.9}
+      .project-status{align-self:flex-start;padding:6px 10px;border:1px solid color-mix(in srgb,var(--a1) 35%,var(--bd));border-radius:999px;background:color-mix(in srgb,var(--a1) 10%,var(--card));color:var(--ink);font-size:12px}
       .pa{display:flex;flex-wrap:wrap;gap:8px}.pa a{font-size:12.5px;font-weight:700;padding:8px 14px;border-radius:10px;border:1px solid var(--bd);background:var(--card);transition:.2s}.pa a:hover{border-color:var(--a1);color:var(--a1)}
       .kind{font-size:10.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--a3)}
       .project-group + .project-group{margin-top:36px}.project-group h3{font-size:20px;margin:0 0 16px}.project-group .pg:empty{display:none}
@@ -864,13 +866,21 @@
           ],
         ],
         [
-          "Automation Testing",
-          "SaaS Subscription & Administration Platform",
-          "assets/automation-testing-screenshot.png",
-          "Built basic test automation for login, user management, and subscription workflows using Selenium WebDriver, PyTest, and the Page Object Model. Used assertions to validate application behavior as a beginner-level automation practice.",
-          ["Selenium (Basic)", "Python (Basic)", "PyTest (Basic)", "POM (Basic)"],
-          "https://saas.anointedcoder.com/",
-          "SaaS-Automation-Testing.zip",
+          "Upcoming Project",
+          "E-Commerce Website Testing",
+          "assets/ecommerce-website-testing.png",
+          "",
+          ["Manual Testing", "SQL", "Postman", "Azure DevOps"],
+          "",
+          "",
+          null,
+          [
+            "Planned test scenarios and test cases for Login, Product Search, Filters, Shopping Cart, and Checkout modules.",
+            "Plan to perform Functional, Smoke, and Regression testing and document test execution results.",
+            "Plan to test REST APIs using Postman and write SQL queries to validate product, customer, and order data.",
+            "Plan to use Azure DevOps to organize test cases, record execution results, and track defects.",
+          ],
+          "Upcoming Project — Coming Soon",
         ],
         [
           "Full-Stack Build",
@@ -890,6 +900,7 @@
       function renderProjects(projects) {
         return projects.map((p) => {
           const development = p[0] === "Full-Stack Build";
+          const upcoming = p[0] === "Upcoming Project";
           const stats = p[7]
             ? `<div class="test-meta" aria-label="Verified project statistics">${p[7].map((stat) => `<span>${stat}</span>`).join("")}</div>`
             : "";
@@ -899,7 +910,10 @@
           const details = p[8]
             ? `<ul class="project-highlights">${p[8].map((item) => `<li>${item}</li>`).join("")}</ul>`
             : `<p>${p[3]}</p>`;
-          return `<article class="glass pc rv${development ? " development" : ""}"><div class="im"><img src="${p[2]}" alt="${p[1]}" loading="lazy" decoding="async"/></div><div class="pb"><div class="kind">${p[0]}</div><h3>${p[1]}</h3>${details}<div class="tg">${p[4].map((t) => `<span>${t}</span>`).join("")}</div>${stats}<div class="pa"><a href="https://github.com/Shivu6573" target="_blank" rel="noopener">GitHub</a>${p[5] ? `<a href="${p[5]}" target="_blank" rel="noopener">↗ Live Application</a>` : ""}${documentation}</div></div></article>`;
+          const status = p[9]
+            ? `<div class="project-status"><strong>Status:</strong> ${p[9]}</div>`
+            : "";
+          return `<article class="glass pc rv${development ? " development" : ""}${upcoming ? " upcoming" : ""}"><div class="im"><img src="${p[2]}" alt="${p[1]}" loading="lazy" decoding="async"/></div><div class="pb"><div class="kind">${p[0]}</div><h3>${p[1]}</h3>${status}${details}<div class="tg">${p[4].map((t) => `<span>${t}</span>`).join("")}</div>${stats}<div class="pa"><a href="https://github.com/Shivu6573" target="_blank" rel="noopener">GitHub</a>${p[5] ? `<a href="${p[5]}" target="_blank" rel="noopener">↗ Live Application</a>` : ""}${documentation}</div></div></article>`;
         }).join("");
       }
       $("#qa-projects").innerHTML = renderProjects(
