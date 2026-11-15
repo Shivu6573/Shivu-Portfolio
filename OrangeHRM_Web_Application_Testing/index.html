@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08111f">
+  <title>OrangeHRM Testing Documentation | Project Files</title>
+  <style>
+    :root{color-scheme:dark;--bg:#08111f;--surface:#101b2c;--card:#142238;--line:#263b55;--text:#f1f6ff;--muted:#a9bad0;--accent:#70b9ff;--shadow:0 18px 50px #0004}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 12% 0,#173154 0,transparent 42%),var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+    a{color:inherit}
+    button{font:inherit}
+    .shell{width:min(1180px,calc(100% - 40px));margin:0 auto;padding:34px 0 42px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .eyebrow{margin:0;color:#55a5ff;font-size:13px;font-weight:850;letter-spacing:.13em}
+    h1{margin:10px 0 12px;font-size:clamp(30px,5vw,43px);line-height:1.12;letter-spacing:-.04em}
+    .intro{max-width:780px;margin:0;color:#c3d1e4;font-size:17px;line-height:1.65}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 16px;border:1px solid var(--line);border-radius:12px;background:#111d2e;color:#dceaff;text-decoration:none;font-weight:700;transition:border-color .18s,background .18s,transform .18s;cursor:pointer}
+    .button:hover,.folder-card:hover,.file-card:hover{border-color:#4f83b7;background:#182a42}
+    .button:focus-visible,.folder-card:focus-visible,.file-card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+    .button:hover{transform:translateY(-1px)}
+    .project-banner{display:flex;align-items:center;gap:18px;margin:24px 0;padding:16px;border:1px solid var(--line);border-radius:16px;background:var(--surface);box-shadow:var(--shadow)}
+    .project-image{width:100px;height:62px;flex:0 0 auto;object-fit:cover;border:1px solid #344962;border-radius:8px;background:#0b1422}
+    .project-meta{min-width:0;flex:1}
+    .project-meta strong{display:block;font-size:16px;line-height:1.4}
+    .project-meta span{display:block;margin-top:3px;color:var(--muted);font-size:13px}
+    .panel{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--surface);box-shadow:var(--shadow)}
+    .panel-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;border-bottom:1px solid var(--line);color:#89c5ff}
+    .panel-heading span:last-child{color:var(--muted);font-size:13px}
+    .folder-grid,.file-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding:20px}
+    .folder-card,.file-card{display:flex;align-items:center;gap:14px;width:100%;min-width:0;min-height:82px;padding:14px;border:1px solid #293e59;border-radius:14px;background:var(--card);color:var(--text);text-align:left;text-decoration:none;cursor:pointer;transition:border-color .18s,background .18s,transform .18s}
+    .folder-card:hover,.file-card:hover{transform:translateY(-2px)}
+    .icon{display:grid;place-items:center;width:50px;height:50px;flex:0 0 auto;border:1px solid #2d4562;border-radius:12px;background:#0a1525;font-size:25px}
+    .file-icon{color:#8dccff;font-size:23px}
+    .card-copy{min-width:0}
+    .card-copy strong{display:block;overflow-wrap:anywhere;font-size:15px;line-height:1.35}
+    .card-copy small{display:block;margin-top:4px;color:var(--muted);font-size:12px}
+    .section-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:20px 20px 0}
+    .section-bar h2{margin:0;font-size:19px}
+    .section-bar .button{min-height:40px;padding:7px 12px;font-size:13px}
+    .file-grid{grid-template-columns:repeat(2,minmax(0,1fr));padding-top:14px}
+    .file-card{min-height:74px}
+    .file-card .icon{width:44px;height:44px}
+    .file-card .card-copy small{overflow-wrap:anywhere}
+    .empty-note{margin:0 20px 20px;padding:12px 14px;border:1px solid #4b4025;border-radius:10px;background:#282315;color:#f2d89d;font-size:13px}
+    .preview{padding:20px}
+    .preview img{display:block;width:100%;max-height:72vh;object-fit:contain;margin:0 auto;border:1px solid #334760;border-radius:10px;background:#070d16}
+    .spreadsheet{display:grid;justify-items:center;gap:12px;padding:40px 20px;border:1px dashed #3c5876;border-radius:12px;background:#0c1726;text-align:center}
+    .spreadsheet .icon{width:64px;height:64px;font-size:30px}
+    .spreadsheet p{max-width:560px;margin:0;color:var(--muted)}
+    footer{padding:20px 8px 0;color:#839ab8;text-align:center;font-size:13px}
+    [hidden]{display:none!important}
+    @media(max-width:850px){.folder-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:620px){.shell{width:min(100% - 24px,560px);padding-top:22px}.topbar{align-items:flex-start}.topbar .button{min-height:40px;padding:7px 11px;font-size:13px}.intro{font-size:15px}.project-banner{flex-wrap:wrap}.project-image{width:82px;height:56px}.project-banner>.button{width:100%}.panel-heading{padding:15px}.folder-grid,.file-grid{grid-template-columns:1fr;gap:10px;padding:14px}.section-bar{align-items:flex-start;margin:16px 14px 0}.folder-card{min-height:72px}.preview{padding:12px}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="topbar">
+        <p class="eyebrow">PROJECT FILES</p>
+        <a class="button" href="../index.html">← Back to portfolio</a>
+      </div>
+      <h1>OrangeHRM Testing Documentation</h1>
+      <p class="intro">Browse the project evidence by folder. Open a folder to see its files, then select an image to preview it or download the workbook.</p>
+    </header>
+    <section class="project-banner" aria-label="Related portfolio project">
+      <img class="project-image" src="../assets/orangehrm-qa-testing.svg" alt="">
+      <div class="project-meta"><strong>OrangeHRM – Web Application Testing</strong><span>Manual Testing · SDLC · STLC · PostgreSQL · SQL · Excel</span></div>
+      <a class="button" href="../index.html#projects">Return to portfolio project</a>
+    </section>
+    <section class="panel" aria-label="Project documentation">
+      <div class="panel-heading"><span id="panel-title">Documentation</span><span id="panel-count"></span></div>
+      <div id="home-view">
+        <div class="folder-grid" id="folder-grid"></div>
+        <div id="root-files"></div>
+        <div id="notes"></div>
+      </div>
+      <div id="folder-view" hidden>
+        <div class="section-bar"><h2 id="folder-title"></h2><button class="button" type="button" id="back-home">← Back to folders</button></div>
+        <div class="file-grid" id="folder-files"></div>
+      </div>
+      <div id="preview-view" hidden>
+        <div class="section-bar"><h2 id="preview-title"></h2><button class="button" type="button" id="back-folder">← Back to folder</button></div>
+        <div class="preview" id="preview-content"></div>
+      </div>
+    </section>
+    <footer>OrangeHRM – Web Application Testing</footer>
+  </main>
+  <script>
+    const project = {"folder":"OrangeHRM_Web_Application_Testing","title":"OrangeHRM Testing Documentation","projectTitle":"OrangeHRM – Web Application Testing","heroImage":"../assets/orangehrm-qa-testing.svg","tools":"Manual Testing · SDLC · STLC · PostgreSQL · SQL · Excel","sectionLabels":{"01_Application_Screenshots":"Application Screenshots","02_Test_Scenarios":"Test Scenarios","03_Test_Cases":"Test Cases","04_Test_Execution":"Test Execution","05_Defect_Reports":"Defect Reports","06_API_SQL_Testing":"API SQL Testing","07_Azure_Regression":"Azure Regression"},"hiddenDuplicateFiles":["OrangeHRM_Requirement_Analysis.xlsx..xlsx"],"notes":["Not provided: A standalone functional test-case document. Individual execution evidence is available in Test Execution.","The identical workbook copy from the original archive is retained in the project folder; the correctly named workbook is linked above."],"folders":[{"name":"Application Screenshots","files":[{"name":"01_Login_Page.png","path":"01_Application_Screenshots/01_Login_Page.png","type":"PNG"},{"name":"02_Dashboard.png.png","path":"01_Application_Screenshots/02_Dashboard.png.png","type":"PNG"},{"name":"03_PIM_Employee_List.png","path":"01_Application_Screenshots/03_PIM_Employee_List.png","type":"PNG"},{"name":"04_Admin_Page.png","path":"01_Application_Screenshots/04_Admin_Page.png","type":"PNG"}]},{"name":"Test Scenarios","files":[{"name":"01_Requirement_Analysis.png","path":"02_Test_Scenarios/01_Requirement_Analysis.png","type":"PNG"},{"name":"02_Test_Scenarios.png","path":"02_Test_Scenarios/02_Test_Scenarios.png","type":"PNG"}]},{"name":"Test Cases","files":[{"name":"03_Test_Data.png","path":"03_Test_Cases/03_Test_Data.png","type":"PNG"}]},{"name":"Test Execution","files":[{"name":"10_Test_Execution_Summary.png","path":"04_Test_Execution/10_Test_Execution_Summary.png","type":"PNG"},{"name":"TC_001_Login_Valid_Credentials.png","path":"04_Test_Execution/TC_001_Login_Valid_Credentials.png","type":"PNG"},{"name":"TC_002_Invalid_Password.png","path":"04_Test_Execution/TC_002_Invalid_Password.png","type":"PNG"},{"name":"TC_003_Empty_Credentials.png","path":"04_Test_Execution/TC_003_Empty_Credentials.png","type":"PNG"},{"name":"TC_004_PIM_Access.png","path":"04_Test_Execution/TC_004_PIM_Access.png","type":"PNG"},{"name":"TC_005_Employee_List_Display.png","path":"04_Test_Execution/TC_005_Employee_List_Display.png","type":"PNG"},{"name":"TC_006_Employee_Search.png","path":"04_Test_Execution/TC_006_Employee_Search.png","type":"PNG"},{"name":"TC_007_Admin_Access.png","path":"04_Test_Execution/TC_007_Admin_Access.png","type":"PNG"},{"name":"TC_008_User_Management.png","path":"04_Test_Execution/TC_008_User_Management.png","type":"PNG"},{"name":"TC_009_Admin_User_Search.png","path":"04_Test_Execution/TC_009_Admin_User_Search.png","type":"PNG"}]},{"name":"Defect Reports","files":[{"name":"01_Defect_Report.png","path":"05_Defect_Reports/01_Defect_Report.png","type":"PNG"}]},{"name":"API SQL Testing","files":[{"name":"API_001_GET_User_Response.png","path":"06_API_SQL_Testing/API_001_GET_User_Response.png","type":"PNG"},{"name":"API_002_GET_User_2.png","path":"06_API_SQL_Testing/API_002_GET_User_2.png","type":"PNG"},{"name":"API_003_GET_Non_Existing_User.png","path":"06_API_SQL_Testing/API_003_GET_Non_Existing_User.png","type":"PNG"},{"name":"API_004_API_Test_Cases_Documentation.png","path":"06_API_SQL_Testing/API_004_API_Test_Cases_Documentation.png","type":"PNG"},{"name":"API_005_POST_Create_User.png","path":"06_API_SQL_Testing/API_005_POST_Create_User.png","type":"PNG"},{"name":"API_007_DELETE_User.png.png","path":"06_API_SQL_Testing/API_007_DELETE_User.png.png","type":"PNG"},{"name":"API_008_PATCH_Update_User.png","path":"06_API_SQL_Testing/API_008_PATCH_Update_User.png","type":"PNG"},{"name":"API_009_Response_Time.png","path":"06_API_SQL_Testing/API_009_Response_Time.png","type":"PNG"},{"name":"API_010_Response_Headers.png","path":"06_API_SQL_Testing/API_010_Response_Headers.png","type":"PNG"},{"name":"SQL_001_Verify_Employee_Records.png","path":"06_API_SQL_Testing/SQL_001_Verify_Employee_Records.png","type":"PNG"},{"name":"SQL_002_Verify_Employee_Search.png","path":"06_API_SQL_Testing/SQL_002_Verify_Employee_Search.png","type":"PNG"},{"name":"SQL_003_Verify_Employee_Sorting.png","path":"06_API_SQL_Testing/SQL_003_Verify_Employee_Sorting.png","type":"PNG"},{"name":"SQL_004_Verify_Total_Employee_Count.png","path":"06_API_SQL_Testing/SQL_004_Verify_Total_Employee_Count.png","type":"PNG"},{"name":"SQL_005_Verify_Employee_Deletion.png","path":"06_API_SQL_Testing/SQL_005_Verify_Employee_Deletion.png","type":"PNG"},{"name":"SQL_006_Test_Cases_Documentation.png","path":"06_API_SQL_Testing/SQL_006_Test_Cases_Documentation.png","type":"PNG"},{"name":"SQL_007_Test_Execution_Results.png","path":"06_API_SQL_Testing/SQL_007_Test_Execution_Results.png","type":"PNG"},{"name":"SQL_008_Test_Summary.png","path":"06_API_SQL_Testing/SQL_008_Test_Summary.png","type":"PNG"}]},{"name":"Azure Regression","files":[{"name":"01_Regression_Test_Suite.png","path":"07_Azure_Regression/01_Regression_Test_Suite.png","type":"PNG"},{"name":"Regression_002_Execution_Results.png.png","path":"07_Azure_Regression/Regression_002_Execution_Results.png.png","type":"PNG"}]}],"rootFiles":[{"name":"OrangeHRM_Requirement_Analysis.xlsx.xlsx","path":"OrangeHRM_Requirement_Analysis.xlsx.xlsx","type":"XLSX"}]};
+    const homeView = document.getElementById("home-view");
+    const folderView = document.getElementById("folder-view");
+    const previewView = document.getElementById("preview-view");
+    const panelTitle = document.getElementById("panel-title");
+    const panelCount = document.getElementById("panel-count");
+    const folderGrid = document.getElementById("folder-grid");
+    const rootFiles = document.getElementById("root-files");
+    const folderFiles = document.getElementById("folder-files");
+    const notes = document.getElementById("notes");
+    let activeFolder = null;
+
+    function fileUrl(file) {
+      return file.path.split("/").map(encodeURIComponent).join("/");
+    }
+
+    function cardIcon(file) {
+      const icon = document.createElement("span");
+      icon.className = "icon file-icon";
+      icon.setAttribute("aria-hidden", "true");
+      icon.textContent = file.type === "XLSX" ? "▤" : "▧";
+      return icon;
+    }
+
+    function createFileCard(file) {
+      const card = document.createElement("button");
+      card.className = "file-card";
+      card.type = "button";
+      card.addEventListener("click", () => showPreview(file));
+      const copy = document.createElement("span");
+      copy.className = "card-copy";
+      const name = document.createElement("strong");
+      name.textContent = file.name;
+      const detail = document.createElement("small");
+      detail.textContent = file.type === "XLSX" ? "Excel workbook · open / download" : file.type + " · open preview";
+      copy.append(name, detail);
+      card.append(cardIcon(file), copy);
+      return card;
+    }
+
+    function showHome() {
+      activeFolder = null;
+      homeView.hidden = false;
+      folderView.hidden = true;
+      previewView.hidden = true;
+      panelTitle.textContent = "Documentation";
+      panelCount.textContent = project.folders.length + " folders · " + project.rootFiles.length + " " + (project.rootFiles.length === 1 ? "file" : "files");
+      window.scrollTo(0, 0);
+    }
+
+    function showFolder(folder) {
+      activeFolder = folder;
+      homeView.hidden = true;
+      folderView.hidden = false;
+      previewView.hidden = true;
+      panelTitle.textContent = "Documentation / " + folder.name;
+      document.getElementById("folder-title").textContent = folder.name;
+      folderFiles.replaceChildren(...folder.files.map(createFileCard));
+      panelCount.textContent = folder.files.length + (folder.files.length === 1 ? " file" : " files");
+      window.scrollTo(0, 0);
+    }
+
+    function showPreview(file) {
+      homeView.hidden = true;
+      folderView.hidden = true;
+      previewView.hidden = false;
+      panelTitle.textContent = "File preview";
+      document.getElementById("preview-title").textContent = file.name;
+      panelCount.textContent = file.type;
+      const content = document.getElementById("preview-content");
+      content.replaceChildren();
+
+      if (["PNG", "JPG", "JPEG", "GIF", "WEBP"].includes(file.type)) {
+        const image = document.createElement("img");
+        image.src = fileUrl(file);
+        image.alt = file.name;
+        content.append(image);
+      } else {
+        const box = document.createElement("div");
+        box.className = "spreadsheet";
+        const icon = cardIcon(file);
+        icon.setAttribute("aria-hidden", "true");
+        const description = document.createElement("p");
+        description.textContent = file.type === "XLSX"
+          ? "This Excel workbook is included with the project files. Download it to open it in Excel or another spreadsheet application."
+          : "Open or download the supplied project file.";
+        const download = document.createElement("a");
+        download.className = "button";
+        download.href = fileUrl(file);
+        download.download = file.name;
+        download.textContent = "Download " + file.name;
+        box.append(icon, description, download);
+        content.append(box);
+      }
+
+      document.getElementById("back-folder").textContent = activeFolder
+        ? "← Back to folder"
+        : "← Back to folders";
+      window.scrollTo(0, 0);
+    }
+
+    for (const folder of project.folders) {
+      const card = document.createElement("button");
+      card.className = "folder-card";
+      card.type = "button";
+      card.addEventListener("click", () => showFolder(folder));
+      const icon = document.createElement("span");
+      icon.className = "icon";
+      icon.setAttribute("aria-hidden", "true");
+      icon.textContent = "📁";
+      const copy = document.createElement("span");
+      copy.className = "card-copy";
+      const name = document.createElement("strong");
+      name.textContent = folder.name;
+      const count = document.createElement("small");
+      count.textContent = folder.files.length + (folder.files.length === 1 ? " file" : " files");
+      copy.append(name, count);
+      card.append(icon, copy);
+      folderGrid.append(card);
+    }
+
+    if (project.rootFiles.length) {
+      const section = document.createElement("section");
+      section.className = "root-section";
+      const heading = document.createElement("div");
+      heading.className = "section-bar";
+      const title = document.createElement("h2");
+      title.textContent = "Project Files";
+      heading.append(title);
+      const grid = document.createElement("div");
+      grid.className = "file-grid";
+      grid.append(...project.rootFiles.map(createFileCard));
+      section.append(heading, grid);
+      rootFiles.append(section);
+    }
+
+    for (const note of project.notes) {
+      const message = document.createElement("p");
+      message.className = "empty-note";
+      message.textContent = note;
+      notes.append(message);
+    }
+
+    document.getElementById("back-home").addEventListener("click", showHome);
+    document.getElementById("back-folder").addEventListener("click", () => {
+      if (activeFolder) showFolder(activeFolder);
+      else showHome();
+    });
+    showHome();
+  </script>
+</body>
+</html>

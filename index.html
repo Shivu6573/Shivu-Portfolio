@@ -46,6 +46,7 @@
       .tag{display:inline-flex;gap:8px;align-items:center;font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:30px;border:1px solid var(--bd);background:var(--card);margin-bottom:18px}
       .tag i{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 var(--ok);animation:pulse 1.8s infinite}@keyframes pulse{70%{box-shadow:0 0 0 9px transparent}}
       h1{font-size:clamp(28px,4vw,46px);line-height:1.05;letter-spacing:-.04em;font-weight:900;margin-bottom:16px}h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;background-size:200% auto;animation:shine 6s linear infinite}@keyframes shine{to{background-position:200% center}}
+      .hero-title{font-size:clamp(13px,2.4vw,32px);line-height:1.05;letter-spacing:-.04em;font-weight:900;margin:0 0 16px;white-space:nowrap}
       .hero-role{margin-top:8px;margin-bottom:12px;color:var(--a1);font-size:clamp(16px,2vw,22px);font-weight:800;letter-spacing:-.02em}
       .hero-role span{color:var(--ink);font-weight:700}
       .hero-badges{display:flex;flex-wrap:wrap;gap:9px;max-width:620px;margin:0 0 14px}
@@ -69,7 +70,6 @@
       .quote{margin-top:18px;padding:16px 18px;border-left:3px solid var(--a1);background:var(--card);border-radius:0 14px 14px 0;font-weight:600}
       .qa-workflow{margin-top:22px;padding:22px}.qa-workflow h3{margin-bottom:14px;font-size:20px}.qa-workflow-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;list-style:none}.qa-workflow-steps li{min-width:0;padding:14px;border:1px solid var(--bd);border-radius:14px;background:var(--card)}.qa-workflow-steps b{display:block;margin-bottom:6px;color:var(--a1);font-size:13px;line-height:1.4}.qa-workflow-steps span{display:block;color:var(--dim);font-size:12px;line-height:1.5}
       .spk{margin-top:22px;padding:18px 22px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:13.5px;color:var(--dim)}.spk b{color:var(--ink)}.spk span{padding:5px 12px;border-radius:20px;background:var(--grad);color:#fff;font-weight:700;font-size:12px}
-      .tool-practice{margin-top:30px}.tool-practice h3{margin-bottom:14px;font-size:20px}.tool-practice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.tool-practice-card{padding:18px}.tool-practice-card h4{margin-bottom:6px;color:var(--a1);font-size:15px}.tool-practice-card p{color:var(--dim);font-size:13px;line-height:1.6}
       /* skills */
       #skills{position:relative;isolation:isolate}
       #skills::before{content:"";position:absolute;z-index:-1;inset:16px 0 0;pointer-events:none;opacity:.18;background-image:radial-gradient(circle at 8% 22%,var(--a1) 0 1.5px,transparent 2.5px),radial-gradient(circle at 91% 17%,var(--a1) 0 1.5px,transparent 2.5px),radial-gradient(circle at 76% 71%,#20D5C2 0 1.5px,transparent 2.5px),linear-gradient(28deg,transparent 17%,color-mix(in srgb,var(--a1) 16%,transparent) 17.1%,transparent 17.3%,transparent 83%,color-mix(in srgb,var(--a1) 13%,transparent) 83.1%,transparent 83.3%),linear-gradient(151deg,transparent 34%,color-mix(in srgb,#a78bfa 12%,transparent) 34.1%,transparent 34.3%);background-size:100% 100%}
@@ -100,13 +100,12 @@
       #skills .skill-list li{display:inline-flex;align-items:flex-start;gap:7px;min-width:0;max-width:100%;padding:6px 9px;border:1px solid color-mix(in srgb,var(--skill-accent) 18%,var(--bd));border-radius:999px;background:color-mix(in srgb,var(--skill-accent) 5%,var(--card));color:var(--ink);font-size:12px;font-weight:600;line-height:1.4;overflow-wrap:anywhere}
       #skills .skill-list li::before{content:"";flex:0 0 6px;width:6px;height:6px;margin-top:.43em;border-radius:50%;background:var(--skill-accent)}
       @media(max-width:980px){#skills .skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-      @media(max-width:980px){.tool-practice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
       @media(max-width:980px){.qa-workflow-steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
-      @media(max-width:640px){#skills .skills-grid{grid-template-columns:minmax(0,1fr);gap:14px}#skills .skill-card{padding:16px 17px 18px}#skills .skill-card-top{min-height:88px}#skills .skill-illustration{width:min(100%,210px)}.tool-practice-grid,.qa-workflow-steps{grid-template-columns:minmax(0,1fr)}.qa-workflow{padding:18px}}
+      @media(max-width:640px){#skills .skills-grid{grid-template-columns:minmax(0,1fr);gap:14px}#skills .skill-card{padding:16px 17px 18px}#skills .skill-card-top{min-height:88px}#skills .skill-illustration{width:min(100%,210px)}.qa-workflow-steps{grid-template-columns:minmax(0,1fr)}.qa-workflow{padding:18px}}
       @media(prefers-reduced-motion:reduce){#skills .skill-card{transition:none}#skills .skill-card:hover{transform:none}}
       /* projects */
       .pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:22px}
-      #qa-projects{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
+      #qa-projects{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
       .pc{overflow:hidden;display:flex;flex-direction:column;transition:transform .2s;transform:perspective(900px) rotateX(var(--rx,0)) rotateY(var(--ry,0))}.pc:hover{border-color:var(--a1);box-shadow:0 24px 60px rgba(0,0,0,.3)}
       .pc .im{overflow:hidden;aspect-ratio:16/8;background:var(--bg2)}.pc img{width:100%;height:100%;object-fit:cover;transition:.6s}.pc:hover img{transform:scale(1.07)}
       #qa-projects .pc.case-study .im{aspect-ratio:16/8}
@@ -1113,14 +1112,15 @@
             <div class="tag">
               <i></i> Open to On-site, Hybrid &amp; Remote Opportunities · Bengaluru
             </div>
-            <h1>Test Engineer | Software Testing &amp; Quality Assurance</h1>
+            <h1>Shiva Kumara S N</h1>
+            <p class="hero-title">Software Testing &amp; Quality Assurance</p>
             <div class="hero-skill-panel" aria-label="Core testing skills">
               <p class="hero-tagline">
-                Manual Testing • SDLC/STLC • Test Case Design &amp; Execution • Defect Reporting • SQL
+                Manual Testing • SQL • SDLC • STLC • Test Case Design • Defect Reporting • Regression Testing
               </p>
             </div>
             <p class="lead">
-              MCA graduate focused on Software Testing and Quality Assurance, with practical experience in manual testing, test case design, test execution, defect reporting, API testing, and SQL. Familiar with SDLC, STLC, regression testing, and testing documentation. Interested in analyzing requirements, preparing test data, validating application functionality, and helping deliver reliable software.
+              MCA graduate with a strong foundation in Software Testing and Quality Assurance. Skilled in understanding application requirements, reviewing documentation, identifying test scenarios, designing test cases, and executing tests. Familiar with Manual Testing, SDLC, STLC, defect reporting and tracking, regression testing, SQL, database validation, and API testing using Postman. Focused on identifying application issues, documenting test results, and contributing to reliable, high-quality software.
             </p>
             <div class="cta">
               <a class="btn pri" href="#projects">View Projects →</a
@@ -1167,10 +1167,13 @@
             <div class="eb" data-n="01">About</div>
             <h2>Turning curiosity into quality.</h2>
             <p style="color: var(--dim)">
-              I am an MCA graduate pursuing an entry-level career in Software Testing and Quality Assurance. Through hands-on projects, I have practised analysing requirements, designing and executing test cases, documenting results, reporting defects, testing APIs using Postman, and validating sample data using SQL.
+              I am an MCA graduate focused on building my career in Software Testing and Quality Assurance. Through hands-on projects, I have gained practical experience in analysing application requirements, preparing test scenarios and test cases, executing test cases, identifying defects, and documenting test results.
             </p>
             <p style="color: var(--dim)">
-              I am strengthening my understanding of SDLC, STLC, regression testing, and test management workflows. I aim to contribute to a QA team by executing test cases carefully, documenting reproducible defects, and helping deliver reliable software.
+              My technical knowledge includes Manual Testing, Functional Testing, Regression Testing, SDLC, STLC, SQL, Database Validation, and API Testing using Postman.
+            </p>
+            <p style="color: var(--dim)">
+              I enjoy exploring application behaviour, identifying unexpected results, and understanding how software can be improved. I look forward to contributing to a professional QA team, continuously developing my testing skills, and helping deliver reliable, user-friendly software.
             </p>
           </div>
           <div class="stats rv">
@@ -1328,23 +1331,6 @@
             </ul>
           </article>
         </div>
-        <div class="tool-practice">
-          <h3>How I use my QA tools</h3>
-          <div class="tool-practice-grid">
-            <article class="glass tool-practice-card">
-              <h4>Postman</h4>
-              <p>Send API requests and validate responses.</p>
-            </article>
-            <article class="glass tool-practice-card">
-              <h4>SQL</h4>
-              <p>Check application data against expected results.</p>
-            </article>
-            <article class="glass tool-practice-card">
-              <h4>Jira</h4>
-              <p>Organize test cases, record results, and track defects.</p>
-            </article>
-          </div>
-        </div>
       </section>
 
       <section id="projects">
@@ -1407,11 +1393,10 @@
                 </div>
                 <h4>2026</h4>
               </div>
-              <div class="edu edu-secondary">
+              <div class="edu">
                 <div>
                   <h4>Bachelor of Computer Applications (BCA)</h4>
                   <small>First Grade Government College, Bangalore University</small>
-                  <br /><b>CGPA: 7.00</b>
                 </div>
                 <h4>2024</h4>
               </div>
@@ -1575,53 +1560,39 @@
           "QA Testing",
           "OrangeHRM Web Application Testing",
           "assets/orangehrm-qa-testing.svg",
-          "Tools: Manual Testing, Postman, SQL",
-          ["Manual Testing", "Postman", "SQL"],
+          "Tools: Manual Testing, SDLC, STLC, PostgreSQL, SQL, Excel",
+          ["Manual Testing", "SDLC", "STLC", "PostgreSQL", "SQL", "Excel"],
           "https://opensource-demo.orangehrmlive.com/",
-          "https://shivu6573.github.io/Shivu-Portfolio/OrangeHRM-Testing-Project.zip",
-          ["15 Test Cases", "15 Passed", "3 Modules Tested", "3 API Tests", "5 SQL Tests"],
+          "./OrangeHRM_Web_Application_Testing/index.html",
+          null,
           [
-            "Tested the Login, Employee (PIM), and Admin modules of the OrangeHRM demo application.",
-            "Designed and executed 15 test cases covering positive, negative, and field-validation scenarios.",
-            "Documented test steps, test data, expected results, actual results, and execution status.",
-            "Tested employee API responses using Postman, including an unauthorized-access scenario.",
-            "Executed basic SQL queries using SELECT and WHERE to retrieve and validate sample employee records.",
-            "Prepared test execution documentation and screenshots.",
+            "Analysed application workflows and identified test scenarios for Login, Employee (PIM) and Admin modules.",
+            "Designed functional test cases covering positive, negative and validation scenarios.",
+            "Executed manual test cases and documented actual results and execution evidence.",
+            "Practised SQL queries using a PostgreSQL sample employee database with OrangeHRM employee records.",
+            "Prepared regression test cases and execution summaries to verify previously tested application functionality.",
           ],
+          null,
+          "Browse Documentation",
         ],
         [
           "QA Testing",
-          "Script Labs – QA Testing Platform",
-          "assets/script-labs-qa-platform.svg",
-          "",
-          ["Manual Testing", "SQL", "Jira"],
-          "https://labs.hendri.me/",
-          "https://shivu6573.github.io/Shivu-Portfolio/Script%20Labs%20-%20QA%20Testing%20Platform.zip",
-          ["20 Test Cases", "19 Passed", "1 Failed", "4 SQL Tests", "Jira Defect Logged"],
-          [
-            "Created and executed test cases for Login, Script Management, Product, Cart, and Checkout workflows.",
-            "Performed Functional testing, recorded actual results, and compared them with expected results.",
-            "Reported BUG_001 in Jira for missing required-field validation, documenting the reproduction steps, expected result, actual result, and severity.",
-            "Executed SQL queries to validate product data and documented test results.",
-          ],
-        ],
-        [
-          "Upcoming Project",
-          "E-Commerce Website Testing",
-          "assets/ecommerce-website-testing.png",
-          "Planned Tools: Manual Testing, SQL",
-          ["Manual Testing", "SQL"],
-          "",
-          "",
+          "OpenCart – E-commerce Web Application Testing",
+          "assets/opencart-website-testing.png",
+          "Tools: Manual Testing, SDLC, STLC, PostgreSQL, SQL, Excel",
+          ["Manual Testing", "SDLC", "STLC", "PostgreSQL", "SQL", "Excel"],
+          "https://demo.opencart.com/",
+          "./OpenCart_E-commerce_Application_Testing/index.html",
           null,
           [
-            "Planned testing covers Login, Product Search, Filters, Shopping Cart, and Checkout.",
-            "Prepare test scenarios, test cases, and test data.",
-            "Perform functional, negative, and regression testing.",
-            "Document expected and actual results and report reproducible defects.",
-            "Practise SQL-based validation of sample e-commerce data.",
+            "Analysed application workflows and identified test scenarios for Customer Registration, Login, Product Catalogue, Shopping Cart and Checkout modules.",
+            "Designed and documented test cases and test data covering positive, negative and validation scenarios.",
+            "Executed manual test cases and recorded actual results against expected results with execution evidence.",
+            "Practised SQL queries using PostgreSQL sample e-commerce data to validate customer records, product details and order information.",
+            "Prepared regression test cases, documented defects and maintained test execution summaries to verify application functionality.",
           ],
-          "Upcoming Project — Coming Soon",
+          null,
+          "Browse Documentation",
         ],
         [
           "Full-Stack Build",
@@ -1661,7 +1632,7 @@
             ? ""
             : `<a href="https://github.com/Shivu6573" target="_blank" rel="noopener">GitHub</a>`;
           const resourceLink = p[6]
-            ? `<a href="${p[6]}" ${p[6].startsWith("http") ? 'target="_blank" rel="noopener"' : "download"}>${p[10] || "↓ Documentation"}</a>`
+            ? `<a href="${p[6]}" ${p[10] === "Browse Documentation" ? "" : p[6].startsWith("http") ? 'target="_blank" rel="noopener"' : "download"}>${p[10] || "↓ Documentation"}</a>`
             : "";
           return `<article class="glass pc rv${development ? " development" : ""}${upcoming ? " upcoming" : ""}${caseStudy ? " case-study" : ""}"><div class="im"><img src="${p[2]}" alt="${p[1]}" loading="lazy" decoding="async"/></div><div class="pb"><div class="kind">${p[0]}</div>${caseStudy ? '<a class="assignment-badge" href="assets/HabotConnect-Recruitment-Assignment.pdf" target="_blank" rel="noopener" aria-label="View recruitment assignment PDF">RECRUITMENT ASSIGNMENT</a>' : ""}<h3>${p[1]}</h3>${status}${details}${deliverable}<div class="tg">${p[4].map((t) => `<span>${t}</span>`).join("")}</div>${stats}<div class="pa">${github}${p[5] ? `<a href="${p[5]}" target="_blank" rel="noopener">↗ Live Application</a>` : ""}${resourceLink}</div></div></article>`;
         }).join("");
