@@ -1339,7 +1339,7 @@
             <h3 id="skill-tools-title">Testing Tools</h3>
             <p>Using tools to manage, track, and collaborate on testing activities.</p>
             <ul class="skill-list">
-              <li>Postman</li><li>Jira</li><li>Git</li><li>GitHub</li>
+              <li>Postman</li><li>Azure DevOps</li><li>Git</li><li>GitHub</li>
             </ul>
           </article>
           <article class="skill-card" aria-labelledby="skill-automation-title">
@@ -1606,6 +1606,7 @@
           ],
           null,
           "Browse Documentation",
+          "https://github.com/Shivu6573/OrangeHRM-Web-Application-Testing---2026",
         ],
         [
           "QA Testing",
@@ -1625,6 +1626,7 @@
           ],
           null,
           "Browse Documentation",
+          "https://github.com/Shivu6573/OpenCart-E-commerce-Application-Testing",
         ],
         [
           "Full-Stack Build",
@@ -1662,7 +1664,7 @@
             : "";
           const github = p[11] === false
             ? ""
-            : `<a href="https://github.com/Shivu6573" target="_blank" rel="noopener">GitHub</a>`;
+            : `<a href="${typeof p[11] === "string" ? p[11] : "https://github.com/Shivu6573"}" target="_blank" rel="noopener">GitHub</a>`;
           const resourceLink = p[6]
             ? `<a class="doc-btn" href="${p[6]}" ${p[10] === "Browse Documentation" ? "" : p[6].startsWith("http") ? 'target="_blank" rel="noopener"' : "download"}>${p[10] || "↓ Documentation"}</a>`
             : "";
